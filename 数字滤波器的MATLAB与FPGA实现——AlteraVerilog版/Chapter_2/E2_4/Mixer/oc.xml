@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<MEGACORE title="NCO"  version="12.1"  build="177"  iptb_version="1.3.0 Build 177"  format_version="120" >
+<NETLIST_SECTION active_core="oc_st" >
+<STATIC_SECTION>
+<PRIVATES>
+<NAMESPACE name = "parameterization">
+<PRIVATE name = "use_mem" value="1"  type="BOOLEAN"  enable="1" />
+<PRIVATE name = "mem_type" value="M512"  type="STRING"  enable="1" />
+<PRIVATE name = "RAWC" value="8"  type="STRING"  enable="1" />
+<PRIVATE name = "RNWC" value="256"  type="STRING"  enable="1" />
+<PRIVATE name = "RAWF" value="8"  type="STRING"  enable="1" />
+<PRIVATE name = "RNWF" value="256"  type="STRING"  enable="1" />
+<PRIVATE name = "MAXC" value="256"  type="STRING"  enable="1" />
+<PRIVATE name = "MAXF" value="256"  type="STRING"  enable="1" />
+<PRIVATE name = "rfs1" value="xxx.hex"  type="STRING"  enable="1" />
+<PRIVATE name = "devicefamily" value="Cyclone IV E"  type="STRING"  enable="1" />
+<PRIVATE name = "DPRI" value="5"  type="STRING"  enable="1" />
+<PRIVATE name = "DEVICE" value="CycloneIVE"  type="STRING"  enable="1" />
+<PRIVATE name = "ACCUM_SCLR" value="0"  type="STRING"  enable="1" />
+<PRIVATE name = "ARCH" value="SMALL_ROM_ARCH"  type="STRING"  enable="1" />
+<PRIVATE name = "TARGET" value="CycloneIVE"  type="STRING"  enable="1" />
+<PRIVATE name = "WANT_DITHER" value="YES"  type="STRING"  enable="1" />
+<PRIVATE name = "APRP" value="16"  type="STRING"  enable="1" />
+<PRIVATE name = "APRF" value="32"  type="STRING"  enable="1" />
+<PRIVATE name = "CK_VALUE" value="10"  type="STRING"  enable="1" />
+<PRIVATE name = "CK_UNIT" value="ns"  type="STRING"  enable="1" />
+<PRIVATE name = "CK_MULT" value="e-9"  type="STRING"  enable="1" />
+<PRIVATE name = "FSAMP_VALUE" value="5"  type="STRING"  enable="1" />
+<PRIVATE name = "FREQ_VALUE" value="625"  type="STRING"  enable="1" />
+<PRIVATE name = "APRI" value="16"  type="STRING"  enable="1" />
+<PRIVATE name = "FSAMP_UNIT" value="MHz"  type="STRING"  enable="1" />
+<PRIVATE name = "FSAMP_MULT" value="1e6"  type="STRING"  enable="1" />
+<PRIVATE name = "FREQ_UNIT" value="kHz"  type="STRING"  enable="1" />
+<PRIVATE name = "FREQ_MULT" value="1e3"  type="STRING"  enable="1" />
+<PRIVATE name = "WANT_PMOD" value="NO"  type="STRING"  enable="1" />
+<PRIVATE name = "WANT_FMOD" value="NO"  type="STRING"  enable="1" />
+<PRIVATE name = "DUAL_NOT_SGL_OP" value="WANT_SIN_ONLY"  type="STRING"  enable="1" />
+<PRIVATE name = "FMOD_PIPELINE" value="1"  type="STRING"  enable="1" />
+<PRIVATE name = "PMOD_PIPELINE" value="1"  type="STRING"  enable="1" />
+<PRIVATE name = "MULT_TYPE" value="DEDICATED"  type="STRING"  enable="1" />
+<PRIVATE name = "THROUGHPUT" value="1"  type="STRING"  enable="1" />
+<PRIVATE name = "CORDIC_TYPE" value="PARALLEL"  type="STRING"  enable="1" />
+<PRIVATE name = "CORDIC_PIPE" value="2"  type="STRING"  enable="1" />
+<PRIVATE name = "NUMCH" value="1"  type="STRING"  enable="1" />
+<PRIVATE name = "WANT_VLOG_SIM" value="YES"  type="STRING"  enable="1" />
+<PRIVATE name = "WANT_VHDL_SIM" value="YES"  type="STRING"  enable="1" />
+<PRIVATE name = "WANT_MATLAB" value="YES"  type="STRING"  enable="1" />
+<PRIVATE name = "WANT_VEC" value="YES"  type="STRING"  enable="1" />
+<PRIVATE name = "PHI_INC" value="8192"  type="STRING"  enable="1" />
+<PRIVATE name = "MODULE_NAME" value="oc_st"  type="STRING"  enable="1" />
+<PRIVATE name = "NETLIST_FILE_NAME" value="oc_st.v"  type="STRING"  enable="1" />
+<PRIVATE name = "PHASE_INC" value="4096"  type="STRING"  enable="1" />
+<PRIVATE name = "FREQ_INC" value="268435456"  type="STRING"  enable="1" />
+<PRIVATE name = "MPR" value="10"  type="STRING"  enable="1" />
+<PRIVATE name = "APR" value="16"  type="STRING"  enable="1" />
+<PRIVATE name = "RAW" value="13"  type="STRING"  enable="1" />
+<PRIVATE name = "RDW" value="9"  type="STRING"  enable="1" />
+<PRIVATE name = "RNW" value="8192"  type="STRING"  enable="1" />
+<PRIVATE name = "MAX" value="73728"  type="STRING"  enable="1" />
+<PRIVATE name = "RSF" value="oc_sin.mif"  type="STRING"  enable="1" />
+<PRIVATE name = "RSV" value="oc_sin.v"  type="STRING"  enable="1" />
+<PRIVATE name = "RSH" value="oc_sin.hex"  type="STRING"  enable="1" />
+<PRIVATE name = "RCF" value="oc_cos.mif"  type="STRING"  enable="1" />
+<PRIVATE name = "RCV" value="oc_cos.v"  type="STRING"  enable="1" />
+<PRIVATE name = "RCH" value="oc_cos.hex"  type="STRING"  enable="1" />
+<PRIVATE name = "NUM_LCELLS" value="313"  type="STRING"  enable="1" />
+<PRIVATE name = "NUM_MEM_BITS" value="147456"  type="STRING"  enable="1" />
+<PRIVATE name = "NUM_EABS" value="16"  type="STRING"  enable="1" />
+<PRIVATE name = "NUM_DSP_BLOCKS" value="0"  type="STRING"  enable="1" />
+</NAMESPACE>
+<NAMESPACE name = "simgen_enable">
+<PRIVATE name = "language" value="Verilog HDL"  type="STRING"  enable="1" />
+<PRIVATE name = "enabled" value="1"  type="BOOLEAN"  enable="1" />
+<PRIVATE name = "gb_enabled" value="1"  type="BOOLEAN"  enable="1" />
+</NAMESPACE>
+<NAMESPACE name = "simgen">
+<PRIVATE name = "filename" value="oc.vo"  type="STRING"  enable="1" />
+</NAMESPACE>
+<NAMESPACE name = "greybox">
+<PRIVATE name = "filename" value="oc_syn.v"  type="STRING"  enable="1" />
+</NAMESPACE>
+<NAMESPACE name = "quartus_settings">
+<PRIVATE name = "DEVICE" value="EP4CE15F17C8"  type="STRING"  enable="1" />
+<PRIVATE name = "FAMILY" value="Cyclone IV E"  type="STRING"  enable="1" />
+</NAMESPACE>
+<NAMESPACE name = "serializer"/>
+</PRIVATES>
+<FILES/>
+<PORTS>
+<PORT name = "phi_inc_i" direction="INPUT"  connect_to="phi_inc_i"  default="NODEFVAL"  high_width="15"  low_width="0"  description="" />
+<PORT name = "fsin_o" direction="OUTPUT"  connect_to="fsin_o"  default="NODEFVAL"  high_width="9"  low_width="0"  description="" />
+<PORT name = "clk" direction="INPUT"  connect_to="clk"  default="NODEFVAL"  width="1"  description="" />
+<PORT name = "reset_n" direction="INPUT"  connect_to="reset_n"  default="NODEFVAL"  width="1"  description="" />
+<PORT name = "clken" direction="INPUT"  connect_to="clken"  default="NODEFVAL"  width="1"  description="" />
+<PORT name = "out_valid" direction="OUTPUT"  connect_to="out_valid"  default="NODEFVAL"  width="1"  description="" />
+</PORTS>
+<LIBRARIES/>
+</STATIC_SECTION>
+</NETLIST_SECTION>
+</MEGACORE>

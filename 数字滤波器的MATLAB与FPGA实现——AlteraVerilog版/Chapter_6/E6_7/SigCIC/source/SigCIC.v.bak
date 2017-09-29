@@ -1,0 +1,26 @@
+//这是SigCIC.v文件的程序清单
+module SigCIC(
+	rst,clk,Xin,
+	Yout);
+	
+	input		rst;   //复位信号，高电平有效
+	input		clk;   //FPGA系统时钟，频率为2kHz
+	input	 signed [11:0]	Xin;  //数据输入频率为2kHZ
+	output signed [7:0]	Yout; //滤波后的输出数据
+	
+	//零点系数的实现代码/////////////////////////
+	//将输入数据存入移位寄存器中
+	reg signed[11:0] Xin1,Xin2;
+	always @(posedge clk or posedge rst)
+		if (rst)
+			//初始化寄存器值为0
+			begin
+				Xin1 <= 12'd0;
+				Xin2 <= 12'd0;
+		   end	
+		else
+		   begin
+				Xin1 <= Xin;
+				Xin2 <= Xin1;
+			end
+			

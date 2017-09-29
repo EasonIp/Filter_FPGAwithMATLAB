@@ -1,0 +1,3 @@
+Warning (10268): Verilog HDL information at FirParallel.v(15): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at FirParallel.v(105): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at FirParallel.v(9): object "Yout" differs only in case from object "yout" in the same scope

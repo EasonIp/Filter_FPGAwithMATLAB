@@ -1,0 +1,125 @@
+# Reading C:/altera/modelsim/modelsim_ase/tcl/vsim/pref.tcl 
+# ERROR: No extended dataflow license exists
+# do MultiHalfBand_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\modelsim\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\modelsim\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand {D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_1.vo}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module hf_1
+# 
+# Top level modules:
+# 	hf_1
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand {D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_2.vo}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module hf_2
+# 
+# Top level modules:
+# 	hf_2
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand {D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_3.vo}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module hf_3
+# 
+# Top level modules:
+# 	hf_3
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand {D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_4.vo}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module hf_4
+# 
+# Top level modules:
+# 	hf_4
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand {D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_5.vo}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module hf_5
+# 
+# Top level modules:
+# 	hf_5
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand {D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_6.vo}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module hf_6
+# 
+# Top level modules:
+# 	hf_6
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/source {D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/source/MultiHalfBand.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module MultiHalfBand
+# 
+# Top level modules:
+# 	MultiHalfBand
+# 
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/simulation/modelsim {D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/simulation/modelsim/MultiHalfBand.vt}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module MultiHalfBand_vlg_tst
+# 
+# Top level modules:
+# 	MultiHalfBand_vlg_tst
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  MultiHalfBand_vlg_tst
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps MultiHalfBand_vlg_tst 
+# Loading work.MultiHalfBand_vlg_tst
+# Loading work.MultiHalfBand
+# Loading work.hf_1
+# Loading sgate_ver.oper_add
+# Loading lpm_ver.lpm_add_sub
+# Loading sgate_ver.oper_mult
+# Loading lpm_ver.lpm_mult
+# Loading lpm_ver.LPM_HINT_EVALUATION
+# Loading sgate_ver.oper_mux
+# Loading sgate_ver.oper_selector
+# Loading altera_mf_ver.scfifo
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading work.hf_2
+# Loading altera_mf_ver.altshift_taps
+# Loading work.hf_3
+# Loading work.hf_4
+# Loading work.hf_5
+# Loading work.hf_6
+# ** Warning: (vsim-3015) D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/source/MultiHalfBand.v(31): [PCDPC] - Port size (2 or 2) does not match connection size (1) for port 'ast_sink_error'. The port definition is at: D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_1.vo(34).
+# 
+#         Region: /MultiHalfBand_vlg_tst/i1/U1
+# ** Warning: (vsim-3015) D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/source/MultiHalfBand.v(45): [PCDPC] - Port size (2 or 2) does not match connection size (1) for port 'ast_sink_error'. The port definition is at: D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_2.vo(34).
+# 
+#         Region: /MultiHalfBand_vlg_tst/i1/U2
+# ** Warning: (vsim-3015) D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/source/MultiHalfBand.v(59): [PCDPC] - Port size (2 or 2) does not match connection size (1) for port 'ast_sink_error'. The port definition is at: D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_3.vo(34).
+# 
+#         Region: /MultiHalfBand_vlg_tst/i1/U3
+# ** Warning: (vsim-3015) D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/source/MultiHalfBand.v(75): [PCDPC] - Port size (2 or 2) does not match connection size (1) for port 'ast_sink_error'. The port definition is at: D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_4.vo(34).
+# 
+#         Region: /MultiHalfBand_vlg_tst/i1/U4
+# ** Warning: (vsim-3015) D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/source/MultiHalfBand.v(91): [PCDPC] - Port size (2 or 2) does not match connection size (1) for port 'ast_sink_error'. The port definition is at: D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_5.vo(34).
+# 
+#         Region: /MultiHalfBand_vlg_tst/i1/U5
+# ** Warning: (vsim-3015) D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/source/MultiHalfBand.v(106): [PCDPC] - Port size (2 or 2) does not match connection size (1) for port 'ast_sink_error'. The port definition is at: D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_6.vo(34).
+# 
+#         Region: /MultiHalfBand_vlg_tst/i1/U6
+# ** Warning: Design size of 8 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 80001 of file "E6_11_Bin_Sin.txt". (Current address [80001], address range [1:80000])    : D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/simulation/modelsim/MultiHalfBand.vt(79)
+#    Time: 0 ps  Iteration: 0  Instance: /MultiHalfBand_vlg_tst
+# ** Note: $finish    : D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/simulation/modelsim/MultiHalfBand.vt(62)
+#    Time: 2514 us  Iteration: 0  Instance: /MultiHalfBand_vlg_tst
+# 1
+# Break in Module MultiHalfBand_vlg_tst at D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/simulation/modelsim/MultiHalfBand.vt line 62
+# Simulation Breakpoint: 1
+# Break in Module MultiHalfBand_vlg_tst at D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/simulation/modelsim/MultiHalfBand.vt line 62
+# MACRO ./MultiHalfBand_run_msim_rtl_verilog.do PAUSED at line 23
+run -all
+# Break key hit 
+# Simulation stop requested.
+# Simulation Breakpoint: Simulation stop requested.
+# MACRO ./MultiHalfBand_run_msim_rtl_verilog.do PAUSED at line 23

@@ -1,0 +1,61 @@
+# Reading C:/altera/modelsim/modelsim_ase/tcl/vsim/pref.tcl 
+# ERROR: No extended dataflow license exists
+# do CICIP_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\modelsim\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\modelsim\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_6/E6_9/CICIP {D:/FilterVerilog/Chapter_6/E6_9/CICIP/CicFilter.vo}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module CicFilter
+# 
+# Top level modules:
+# 	CicFilter
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_6/E6_9/CICIP/source {D:/FilterVerilog/Chapter_6/E6_9/CICIP/source/CICIP.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module CICIP
+# 
+# Top level modules:
+# 	CICIP
+# 
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_6/E6_9/CICIP/simulation/modelsim {D:/FilterVerilog/Chapter_6/E6_9/CICIP/simulation/modelsim/CICIP.vt}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module CICIP_vlg_tst
+# 
+# Top level modules:
+# 	CICIP_vlg_tst
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  CICIP_vlg_tst
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps CICIP_vlg_tst 
+# Loading work.CICIP_vlg_tst
+# Loading work.CICIP
+# Loading work.CicFilter
+# Loading lpm_ver.lpm_add_sub
+# Loading sgate_ver.oper_add
+# Loading sgate_ver.oper_less_than
+# Loading sgate_ver.oper_mux
+# Loading sgate_ver.oper_selector
+# Loading altera_mf_ver.scfifo
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 2001 of file "dsin_in.txt". (Current address [2001], address range [1:2000])    : D:/FilterVerilog/Chapter_6/E6_9/CICIP/simulation/modelsim/CICIP.vt(96)
+#    Time: 0 ps  Iteration: 0  Instance: /CICIP_vlg_tst
+# ** Note: $finish    : D:/FilterVerilog/Chapter_6/E6_9/CICIP/simulation/modelsim/CICIP.vt(79)
+#    Time: 636 ns  Iteration: 0  Instance: /CICIP_vlg_tst
+# 1
+# Break in Module CICIP_vlg_tst at D:/FilterVerilog/Chapter_6/E6_9/CICIP/simulation/modelsim/CICIP.vt line 79
+# Simulation Breakpoint: 1
+# Break in Module CICIP_vlg_tst at D:/FilterVerilog/Chapter_6/E6_9/CICIP/simulation/modelsim/CICIP.vt line 79
+# MACRO ./CICIP_run_msim_rtl_verilog.do PAUSED at line 18

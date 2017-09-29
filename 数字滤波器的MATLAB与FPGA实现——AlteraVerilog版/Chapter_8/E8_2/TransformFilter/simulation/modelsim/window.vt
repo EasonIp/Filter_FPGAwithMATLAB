@@ -1,0 +1,108 @@
+// Copyright (C) 1991-2012 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "08/02/2014 23:06:13"
+                                                                                
+// Verilog Test Bench template for design : window
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ps/ 1 ps
+module window_vlg_tst();
+// constants                                           
+// general purpose registers
+//reg eachvec;
+// test vector input registers
+reg clk;
+reg [11:0] din;
+reg rst;
+// wires                                               
+wire clkdv;
+wire [11:0]  count16_256;
+wire [15:0]  dout_interlaced;
+
+// assign statements (if any)                          
+window i1 (
+// port map - connection between master ports and signals/registers   
+	.clk(clk),
+	.clkdv(clkdv),
+	.count16_256(count16_256),
+	.din(din),
+	.dout_interlaced(dout_interlaced),
+	.rst(rst)
+);
+parameter clk_period=400; //设置时钟信号周期（频率）
+//parameter period_data=clk_period*6;//数据周期
+parameter clk_half_period=clk_period/2;
+//parameter data_half_period=period_data/2;
+parameter data_num=2000;  //仿真数据长度
+parameter time_sim=data_num*clk_period; //仿真时间
+
+initial
+begin
+	//设置时钟信号初值
+	clk=1;
+	//clk_data=1;
+	//设置复位信号
+	rst=1;
+	#10000 rst=0;
+	//设置仿真时间
+	#time_sim $finish;
+	//设置输入信号初值
+end
+
+
+
+//产生时钟信号
+always                                                 
+	#clk_half_period clk=~clk;
+
+//从外部TX文件读入数据作为测试激励
+//integer Pattern;
+//reg [15:0] stimulus[1:data_num];
+//initial
+//begin
+//   //文件必须放置在"工程目录\simulation\modelsim"路径下
+//	$readmemb("din_sin.txt",stimulus);
+//	//$readmemb("din_rand.txt",stimulus);
+//	Pattern=0;
+//	repeat(data_num)
+//		begin
+//			Pattern=Pattern+1;
+//			din=stimulus[Pattern];
+//			#period_data;//数据周期为时钟周期的8倍
+//		end
+//end
+
+
+	always @(posedge clkdv or posedge rst)
+		if (rst)
+		   begin
+				din <= 0;
+				//clk16v <=0;
+			end
+		else
+		   begin
+				//din <= din + 1;
+				din <= 12'h800;
+				//clk16v <= count[3];
+			end
+
+endmodule

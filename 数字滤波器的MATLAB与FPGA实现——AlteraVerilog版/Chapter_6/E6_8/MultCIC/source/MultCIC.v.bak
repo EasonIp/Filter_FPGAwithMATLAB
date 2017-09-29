@@ -1,0 +1,23 @@
+//这是MultCIC.v文件的程序清单
+module MultCIC (
+	rst,clk,Iin,
+	dout,rdy);
+	
+	input		rst;   //复位信号，高电平有效
+	input		clk;   //FPGA系统时钟，频率为2kHz
+	input	  [36:0]	Iin;  //数据输入频率为2kHZ
+	output  [36:0]	dout; //滤波后的输出数据
+	output rdy;    //数据有效指示信号
+	
+	reg [2:0] c;
+	reg [36:0] dout_tem;
+	reg rdy_tem;
+	always @(posedge clk or posedge rst)
+		if (rst)
+			//初始化寄存器值为0
+			begin
+				c <= 3'd0;
+				dout_tem <= 37'd0;
+				rdy_tem <= 1'b0;
+		   end	
+		else

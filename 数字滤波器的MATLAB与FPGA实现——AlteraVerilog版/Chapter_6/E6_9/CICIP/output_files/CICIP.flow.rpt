@@ -1,0 +1,167 @@
+Flow report for CICIP
+Tue Jun 03 23:29:10 2014
+Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------+
+; Flow Summary                                                                   ;
++------------------------------------+-------------------------------------------+
+; Flow Status                        ; Successful - Tue Jun 03 23:29:10 2014     ;
+; Quartus II 32-bit Version          ; 12.1 Build 177 11/07/2012 SJ Full Version ;
+; Revision Name                      ; CICIP                                     ;
+; Top-level Entity Name              ; CICIP                                     ;
+; Family                             ; Cyclone IV E                              ;
+; Device                             ; EP4CE15F17C8                              ;
+; Timing Models                      ; Final                                     ;
+; Total logic elements               ; 584 / 15,408 ( 4 % )                      ;
+;     Total combinational functions  ; 439 / 15,408 ( 3 % )                      ;
+;     Dedicated logic registers      ; 450 / 15,408 ( 3 % )                      ;
+; Total registers                    ; 450                                       ;
+; Total pins                         ; 38 / 166 ( 23 % )                         ;
+; Total virtual pins                 ; 0                                         ;
+; Total memory bits                  ; 80 / 516,096 ( < 1 % )                    ;
+; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                           ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                             ;
++------------------------------------+-------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 06/03/2014 23:28:06 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; CICIP               ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                            ;
++-------------------------------------+------------------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                                                  ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+------------------------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 827313738527.140180928603656                                           ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                            ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                              ; <None>        ; --          ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                                                   ; --            ; --          ; eda_simulation ;
+; IP_TOOL_NAME                        ; CIC                                                                    ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                                   ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                     ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; cic-library/auk_dspip_avalon_streaming_block_sink_cic_121.vhd          ; --            ; --          ; --             ;
+; MISC_FILE                           ; cic-library/auk_dspip_avalon_streaming_block_sink_fftfprvs_cic_121.vhd ; --            ; --          ; --             ;
+; MISC_FILE                           ; cic-library/auk_dspip_avalon_streaming_block_source_cic_121.vhd        ; --            ; --          ; --             ;
+; MISC_FILE                           ; cic-library/auk_dspip_avalon_streaming_controller_cic_121.vhd          ; --            ; --          ; --             ;
+; MISC_FILE                           ; cic-library/auk_dspip_avalon_streaming_controller_pe_cic_121.vhd       ; --            ; --          ; --             ;
+; MISC_FILE                           ; cic-library/auk_dspip_avalon_streaming_sink_cic_121.vhd                ; --            ; --          ; --             ;
+; MISC_FILE                           ; cic-library/auk_dspip_avalon_streaming_source_cic_121.vhd              ; --            ; --          ; --             ;
+; MISC_FILE                           ; cic-library/auk_dspip_cic_lib_pkg_cic_121.vhd                          ; --            ; --          ; --             ;
+; MISC_FILE                           ; cic-library/auk_dspip_delay_cic_121.vhd                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; cic-library/auk_dspip_differentiator_cic_121.vhd                       ; --            ; --          ; --             ;
+; MISC_FILE                           ; cic-library/auk_dspip_downsample_cic_121.vhd                           ; --            ; --          ; --             ;
+; MISC_FILE                           ; cic-library/auk_dspip_fastaddsub_cic_121.vhd                           ; --            ; --          ; --             ;
+; MISC_FILE                           ; cic-library/auk_dspip_fastadd_cic_121.vhd                              ; --            ; --          ; --             ;
+; MISC_FILE                           ; cic-library/auk_dspip_integrator_cic_121.vhd                           ; --            ; --          ; --             ;
+; MISC_FILE                           ; cic-library/auk_dspip_lib_pkg_cic_121.vhd                              ; --            ; --          ; --             ;
+; MISC_FILE                           ; cic-library/auk_dspip_math_pkg_cic_121.vhd                             ; --            ; --          ; --             ;
+; MISC_FILE                           ; cic-library/auk_dspip_pipelined_adder_cic_121.vhd                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; cic-library/auk_dspip_roundsat_cic_121.vhd                             ; --            ; --          ; --             ;
+; MISC_FILE                           ; cic-library/auk_dspip_text_pkg_cic_121.vhd                             ; --            ; --          ; --             ;
+; MISC_FILE                           ; cic-library/auk_dspip_upsample_cic_121.vhd                             ; --            ; --          ; --             ;
+; MISC_FILE                           ; cic-library/auk_dspip_variable_downsample_cic_121.vhd                  ; --            ; --          ; --             ;
+; MISC_FILE                           ; CicFilter_cic.vhd                                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; CicFilter_quartus.tcl                                                  ; --            ; --          ; --             ;
+; MISC_FILE                           ; CicFilter_fir_comp_coeff.m                                             ; --            ; --          ; --             ;
+; MISC_FILE                           ; CicFilter_input.txt                                                    ; --            ; --          ; --             ;
+; MISC_FILE                           ; CicFilter_nativelink.tcl                                               ; --            ; --          ; --             ;
+; MISC_FILE                           ; CicFilter_tb.v                                                         ; --            ; --          ; --             ;
+; MISC_FILE                           ; CicFilter.v                                                            ; --            ; --          ; --             ;
+; MISC_FILE                           ; CicFilter.bsf                                                          ; --            ; --          ; --             ;
+; MISC_FILE                           ; CicFilter.vo                                                           ; --            ; --          ; --             ;
+; MISC_FILE                           ; CicFilter_syn.v                                                        ; --            ; --          ; --             ;
+; MISC_FILE                           ; CicFilter.qip                                                          ; --            ; --          ; --             ;
+; MISC_FILE                           ; CicFilter.html                                                         ; --            ; --          ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                                                   ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                                                               ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                  ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                                 ; --            ; --          ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                           ; --            ; --          ; --             ;
+; SEARCH_PATH                         ; .                                                                      ; --            ; --          ; --             ;
+; SEARCH_PATH                         ; cic-library                                                            ; --            ; --          ; --             ;
++-------------------------------------+------------------------------------------------------------------------+---------------+-------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:09     ; 1.0                     ; 345 MB              ; 00:00:09                           ;
+; Fitter                    ; 00:00:13     ; 1.1                     ; 442 MB              ; 00:00:12                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 301 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 332 MB              ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 258 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 274 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:31     ; --                      ; --                  ; 00:00:29                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                         ;
++---------------------------+------------------+------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++---------------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis      ; 20120612-2332    ; Windows XP ; 5.1        ; i686           ;
+; Fitter                    ; 20120612-2332    ; Windows XP ; 5.1        ; i686           ;
+; Assembler                 ; 20120612-2332    ; Windows XP ; 5.1        ; i686           ;
+; TimeQuest Timing Analyzer ; 20120612-2332    ; Windows XP ; 5.1        ; i686           ;
+; EDA Netlist Writer        ; 20120612-2332    ; Windows XP ; 5.1        ; i686           ;
+; EDA Netlist Writer        ; 20120612-2332    ; Windows XP ; 5.1        ; i686           ;
++---------------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off CICIP -c CICIP
+quartus_fit --read_settings_files=off --write_settings_files=off CICIP -c CICIP
+quartus_asm --read_settings_files=off --write_settings_files=off CICIP -c CICIP
+quartus_sta CICIP -c CICIP
+quartus_eda --read_settings_files=off --write_settings_files=off CICIP -c CICIP
+quartus_eda --read_settings_files=on --write_settings_files=off CICIP -c CICIP --gen_testbench
+
+
+

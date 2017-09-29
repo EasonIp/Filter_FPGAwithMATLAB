@@ -1,0 +1,26 @@
+#------------------GLOBAL--------------------#
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name ENABLE_INIT_DONE_OUTPUT OFF
+
+#复位引脚
+set_location_assignment	PIN_M1	-to rst
+
+#时钟引脚
+set_location_assignment	PIN_A9	-to clk
+
+#LED对应的引脚
+set_location_assignment	PIN_J1	-to ldoc
+set_location_assignment	PIN_J2	-to ldmix
+
+#输入信号对应的引脚
+set_location_assignment	PIN_R8	-to din[0]
+set_location_assignment	PIN_E1	-to din[1]
+set_location_assignment	PIN_T8   -to din[2]
+set_location_assignment	PIN_M2	-to din[3]
+set_location_assignment	PIN_T9	-to din[4]
+set_location_assignment	PIN_A8	-to din[5]
+set_location_assignment	PIN_G5	-to din[6]
+set_location_assignment	PIN_G11	-to din[7]
+set_location_assignment	PIN_C14	-to din[8]
+set_location_assignment	PIN_E7	-to din[9]
+

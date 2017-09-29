@@ -1,0 +1,163 @@
+//这是SecondTap.v文件的程序清单
+module SecondTap (
+	rst,clk,Xin,
+	Yout);
+	
+	input		rst;   //复位信号，高电平有效
+	input		clk;   //FPGA系统时钟，频率为2kHz
+	input	 signed [8:0]	Xin;  //数据输入频率为2kHZ
+	output signed [10:0]	Yout; //滤波后的输出数据
+	
+	//零点系数的实现代码/////////////////////////
+	//将输入数据存入移位寄存器中
+	reg signed[8:0] Xin1,Xin2;
+	always @(posedge clk or posedge rst)
+		if (rst)
+			//初始化寄存器值为0
+			begin
+				Xin1 <= 9'd0;
+				Xin2 <= 9'd0;
+		   end	
+		else
+		   begin
+				Xin1 <= Xin;
+				Xin2 <= Xin1;
+			end
+			
+   //采用移位运算及加法运算实现乘法运算
+	wire signed [23:0] XMult0,XMult1,XMult2;
+	assign XMult0 = {{5{Xin[8]}},Xin,10'd0};  //*1024
+	assign XMult1 = {{10{Xin1[8]}},Xin1,5'd0}+{{11{Xin1[8]}},Xin1,4'd0}+{{13{Xin1[8]}},Xin1,2'd0};  //*52
+	assign XMult2 = {{5{Xin2[8]}},Xin2,10'd0}; //*1024
+ 
+	//对滤波器系数与输入数据乘法结果进行累加
+	wire signed [23:0] Xout;
+	assign Xout = XMult0 + XMult1 + XMult2;
+	
+	
+	//极点系数的实现代码///////////////////////
+	wire signed[10:0] Yin;
+	reg signed[10:0] Yin1,Yin2;
+	always @(posedge clk or posedge rst)
+		if (rst)
+			//初始化寄存器值为0
+			begin
+				Yin1 <= 11'd0;
+				Yin2 <= 11'd0;
+			end
+		else
+		   begin
+				Yin1 <= Yin;
+				Yin2 <= Yin1;
+			end
+			
+	//采用移位运算及加法运算实现乘法运算
+	wire signed [23:0] YMult1,YMult2;
+	wire signed [23:0] Ysum,Ydiv;
+	assign YMult1 = {{4{Yin1[11]}},Yin1,9'd0}+{{5{Yin1[11]}},Yin1,8'd0}+{{8{Yin1[11]}},Yin1,5'd0}+
+	                {{11{Yin1[11]}},Yin1,2'd0}+{{13{Yin1[11]}},Yin1};  //*805
+	assign YMult2 = {{3{Yin2[11]}},Yin2,10'd0}-{{5{Yin2[11]}},Yin2,8'd0}-{{9{Yin2[11]}},Yin2,4'd0}-
+	                {{10{Yin2[11]}},Yin2,3'd0}-{{13{Yin2[11]}},Yin2};  //*743
+						 
+ 
+	//第一级IIR滤波器实现代码///////////////////////////
+	assign Ysum = Xout+YMult1-YMult2;	
+	assign Ydiv = {{10{Ysum[23]}},Ysum[23:10]};//1204
+	//根据仿真结果可知，第4级滤波器的输出范围可用12位表示
+   assign Yin = (rst ? 11'd0 : Ydiv[10:0]);
+	//增加一级寄存器，提高运行速度
+	reg signed [10:0] Yout_reg ;
+	always @(posedge clk)
+		Yout_reg <= Yin;
+	assign Yout = Yout_reg;
+	
+endmodule
+/*
+entity ThirdTap is
+    Port ( rst : in  STD_LOGIC;
+           clk : in  STD_LOGIC;
+           Xin : in  STD_LOGIC_VECTOR (8 downto 0);
+           Yout : out  STD_LOGIC_VECTOR (10 downto 0));
+end ThirdTap;
+
+architecture Behavioral of ThirdTap is
+	--定义2个8比特信号，存储延时的输入数据Xin
+   signal Xin_1,Xin_2: std_logic_vector (8 downto 0);
+	--定义3个20比特信号，存储系数与输入数据相乘及乘加后的数据
+   signal XMult_1,XMult_2,XMult_0,Xout: std_logic_vector (23 downto 0);
+	--零点滤波器系数为常量，采用移位及加法运算实现常系数乘法
+	--c0=1024=左移10位
+	--c1=52=32+16+4=左移5位+左移4位+左移2位
+	--c2=1024=左移10位
+	
+	--定义3个8比特信号，存储极点的输入及延时数据
+   signal Yin,Yin_1,Yin_2: std_logic_vector (10 downto 0);
+	--极点滤波器系数为常量，采用移位及加法运算实现常系数乘法
+	--c0=1024=左移10位
+	--c1=-805=-（512+256+32+4+1）=-（左移9位+左移8位+左移5位+左移2位+原始数据）
+	--c2=743=1024-256-16-8-1=左移10位-左移8位-左移4位-左移3位-原始数据
+	constant zeros:std_logic_vector(23 downto 0):=(others=>'0');
+	constant ten: std_logic_vector(4 downto 0):="01010";
+   signal YMult_2,YMult_1,Ysum,Ydiv: std_logic_vector (23 downto 0);
+	
+	
+begin
+   ----------------------------------
+	--零点系数的实现代码
+	--将输入数据存入移位寄存器中
+	PXin: process(rst,clk)
+	begin
+		if rst='0' then 
+         Xin_1<=(others=>'0');
+         Xin_2<=(others=>'0');
+		elsif rising_edge(clk) then
+         Xin_1<=Xin;
+         Xin_2<=Xin_1;
+		end if;
+	end process PXin;
+	
+   --采用移位运算及加法运算代替乘法运算
+   XMult_0<=zeros+(Xin&"0000000000"); --*1024
+   XMult_1<=zeros+(Xin_1&"00000")+(Xin_1&"0000")+(Xin_1&"00"); --*52
+   XMult_2<=zeros+(Xin_2&"0000000000"); --*1024
+
+	--对滤波器系数与输入数据的乘法结果进行累加，并输出滤波后的数据
+	Xout<=XMult_1+XMult_2+XMult_0;
+
+   ---------------------------------------
+	--极点系数的实现代码
+	--将输入数据存入移位寄存器中
+   PYin: process(rst,clk)
+	begin
+		if rst='0' then 
+		   Yin_1<=(others=>'0');
+		   Yin_2<=(others=>'0');
+		elsif rising_edge(clk) then
+		   Yin_1<=Yin;
+			Yin_2<=Yin_1;
+		end if;
+	end process PYin;
+	
+   --采用移位运算及加法运算代替乘法运算
+	YMult_1<=zeros+(Yin_1&"000000000")+(Yin_1&"00000000")+(Yin_1&"00000")+(Yin_1&"00")+Yin_1;--*805
+	YMult_2<=zeros+(Yin_2&"0000000000")-(Yin_2&"00000000")-(Yin_2&"0000")
+            -(Yin_2&"000")-Yin_2;    --*743
+	--对滤波器系数与输入数据的乘法结果进行累加，并输出滤波后的数据
+	
+	----------------------------------------
+	--第一级IIR滤波器实现代码
+	Ysum<=Xout+YMult_1-YMult_2;
+   Ydiv <= shr(Ysum,ten);
+	--根据仿真结果可知，第一级滤波器的输出范围可用11位表示
+	Yin <= Ydiv(10 downto 0) when rst='1' else (others=>'0');
+	--增加一级寄存器，提高运行速度
+	process 
+	begin
+	wait until rising_edge(clk);
+		Yout <= Yin;
+	end process;
+
+end Behavioral;
+
+
+*/	

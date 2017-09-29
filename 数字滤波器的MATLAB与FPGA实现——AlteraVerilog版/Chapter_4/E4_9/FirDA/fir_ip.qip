@@ -1,0 +1,24 @@
+set_global_assignment -entity "fir_ip" -library "fir_ip" -name IP_TOOL_NAME "altera_fir_compiler_ii"
+set_global_assignment -entity "fir_ip" -library "fir_ip" -name IP_TOOL_VERSION "12.1"
+set_global_assignment -entity "fir_ip" -library "fir_ip" -name IP_TOOL_ENV "mwpim"
+set_global_assignment -library "fir_ip" -name MISC_FILE [file join $::quartus(qip_path) "fir_ip.cmp"]
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+
+set_global_assignment -library "fir_ip" -name VERILOG_FILE [file join $::quartus(qip_path) "fir_ip.v"]
+set_global_assignment -library "fir_ip" -name VERILOG_FILE [file join $::quartus(qip_path) "fir_ip/altera_avalon_sc_fifo.v"]
+set_global_assignment -library "fir_ip" -name VHDL_FILE [file join $::quartus(qip_path) "fir_ip/auk_dspip_math_pkg_hpfir.vhd"]
+set_global_assignment -library "fir_ip" -name VHDL_FILE [file join $::quartus(qip_path) "fir_ip/auk_dspip_lib_pkg_hpfir.vhd"]
+set_global_assignment -library "fir_ip" -name VHDL_FILE [file join $::quartus(qip_path) "fir_ip/auk_dspip_avalon_streaming_controller_hpfir.vhd"]
+set_global_assignment -library "fir_ip" -name VHDL_FILE [file join $::quartus(qip_path) "fir_ip/auk_dspip_avalon_streaming_sink_hpfir.vhd"]
+set_global_assignment -library "fir_ip" -name VHDL_FILE [file join $::quartus(qip_path) "fir_ip/auk_dspip_avalon_streaming_source_hpfir.vhd"]
+set_global_assignment -library "fir_ip" -name VHDL_FILE [file join $::quartus(qip_path) "fir_ip/auk_dspip_roundsat_hpfir.vhd"]
+set_global_assignment -library "fir_ip" -name VHDL_FILE [file join $::quartus(qip_path) "fir_ip/dspba_library_package.vhd"]
+set_global_assignment -library "fir_ip" -name VHDL_FILE [file join $::quartus(qip_path) "fir_ip/dspba_library.vhd"]
+set_global_assignment -library "fir_ip" -name VHDL_FILE [file join $::quartus(qip_path) "fir_ip/fir_ip_0002_rtl.vhd"]
+set_global_assignment -library "fir_ip" -name VHDL_FILE [file join $::quartus(qip_path) "fir_ip/fir_ip_0002_ast.vhd"]
+set_global_assignment -library "fir_ip" -name VHDL_FILE [file join $::quartus(qip_path) "fir_ip/fir_ip_0002.vhd"]
+set_global_assignment -library "fir_ip" -name SDC_FILE [file join $::quartus(qip_path) "fir_ip/fir_ip_0002.sdc"]
+
+set_global_assignment -entity "fir_ip_0002" -library "fir_ip" -name IP_TOOL_NAME "altera_fir_compiler_ii"
+set_global_assignment -entity "fir_ip_0002" -library "fir_ip" -name IP_TOOL_VERSION "12.1"
+set_global_assignment -entity "fir_ip_0002" -library "fir_ip" -name IP_TOOL_ENV "mwpim"

@@ -1,0 +1,65 @@
+# Reading C:/altera/modelsim/modelsim_ase/tcl/vsim/pref.tcl 
+# do Mixer_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\modelsim\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\modelsim\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+d:/FilterVerilog/Chapter_2/E2_4/Mixer {d:/FilterVerilog/Chapter_2/E2_4/Mixer/oc.vo}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module oc
+# 
+# Top level modules:
+# 	oc
+# vlog -vlog01compat -work work +incdir+d:/FilterVerilog/Chapter_2/E2_4/Mixer/source {d:/FilterVerilog/Chapter_2/E2_4/Mixer/source/Mixer.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module Mixer
+# 
+# Top level modules:
+# 	Mixer
+# 
+# vlog -vlog01compat -work work +incdir+d:/FilterVerilog/Chapter_2/E2_4/Mixer/simulation/modelsim {d:/FilterVerilog/Chapter_2/E2_4/Mixer/simulation/modelsim/Mixer.vt}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module Mixer_vlg_tst
+# 
+# Top level modules:
+# 	Mixer_vlg_tst
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  Mixer_vlg_tst
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps Mixer_vlg_tst 
+# Loading work.Mixer_vlg_tst
+# Loading work.Mixer
+# Loading work.oc
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading lpm_ver.lpm_add_sub
+# Loading lpm_ver.lpm_counter
+# Loading sgate_ver.oper_add
+# Loading sgate_ver.oper_mux
+# ** Warning: (vsim-3017) d:/FilterVerilog/Chapter_2/E2_4/Mixer/oc.vo(2343): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /Mixer_vlg_tst/i1/U1/niiO
+# ** Warning: (vsim-3722) d:/FilterVerilog/Chapter_2/E2_4/Mixer/oc.vo(2343): [TFMPC] - Missing connection for port 'eq'.
+# 
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 801 of file "SinIn.txt". (Current address [801], address range [1:800])    : d:/FilterVerilog/Chapter_2/E2_4/Mixer/simulation/modelsim/Mixer.vt(82)
+#    Time: 0 ps  Iteration: 0  Instance: /Mixer_vlg_tst
+# ** Note: $finish    : d:/FilterVerilog/Chapter_2/E2_4/Mixer/simulation/modelsim/Mixer.vt(67)
+#    Time: 160050 ns  Iteration: 0  Instance: /Mixer_vlg_tst
+# 1
+# Break in Module Mixer_vlg_tst at d:/FilterVerilog/Chapter_2/E2_4/Mixer/simulation/modelsim/Mixer.vt line 67
+# Simulation Breakpoint: 1
+# Break in Module Mixer_vlg_tst at d:/FilterVerilog/Chapter_2/E2_4/Mixer/simulation/modelsim/Mixer.vt line 67
+# MACRO ./Mixer_run_msim_rtl_verilog.do PAUSED at line 18

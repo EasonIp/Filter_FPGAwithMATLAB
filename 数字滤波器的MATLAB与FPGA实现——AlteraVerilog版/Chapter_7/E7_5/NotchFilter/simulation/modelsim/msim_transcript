@@ -1,0 +1,96 @@
+# Reading C:/altera/modelsim/modelsim_ase/tcl/vsim/pref.tcl 
+# ERROR: No extended dataflow license exists
+# do NotchFilter_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\modelsim\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\modelsim\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_7/E7_5/NotchFilter {D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/nco50.vo}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module nco50
+# 
+# Top level modules:
+# 	nco50
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_7/E7_5/NotchFilter {D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/mult.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module mult
+# 
+# Top level modules:
+# 	mult
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/source {D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/source/NotchFilter.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module NotchFilter
+# 
+# Top level modules:
+# 	NotchFilter
+# 
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/simulation/modelsim {D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/simulation/modelsim/NotchFilter.vt}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module NotchFilter_vlg_tst
+# 
+# Top level modules:
+# 	NotchFilter_vlg_tst
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  NotchFilter_vlg_tst
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps NotchFilter_vlg_tst 
+# Loading work.NotchFilter_vlg_tst
+# Loading work.NotchFilter
+# Loading work.nco50
+# Loading altera_mf_ver.altmult_add
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading lpm_ver.lpm_add_sub
+# Loading lpm_ver.lpm_counter
+# Loading sgate_ver.oper_add
+# Loading work.mult
+# Loading lpm_ver.lpm_mult
+# Loading lpm_ver.LPM_HINT_EVALUATION
+# ** Warning: (vsim-3017) D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/nco50.vo(1973): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /NotchFilter_vlg_tst/i1/u1/n11i
+# ** Warning: (vsim-3722) D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/nco50.vo(1973): [TFMPC] - Missing connection for port 'eq'.
+# 
+# ** Warning: (vsim-3017) D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/nco50.vo(1973): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /NotchFilter_vlg_tst/i1/u2/n11i
+# ** Warning: (vsim-3722) D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/nco50.vo(1973): [TFMPC] - Missing connection for port 'eq'.
+# 
+# ** Warning: (vsim-3016) D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/mult.v(62): Port type is incompatible with connection (port 'clock').
+# 
+#         Region: /NotchFilter_vlg_tst/i1/u3/lpm_mult_component
+# ** Warning: (vsim-3016) D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/mult.v(62): Port type is incompatible with connection (port 'clock').
+# 
+#         Region: /NotchFilter_vlg_tst/i1/u4/lpm_mult_component
+# ** Warning: (vsim-3016) D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/mult.v(62): Port type is incompatible with connection (port 'clock').
+# 
+#         Region: /NotchFilter_vlg_tst/i1/u5/lpm_mult_component
+# ** Warning: (vsim-3016) D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/mult.v(62): Port type is incompatible with connection (port 'clock').
+# 
+#         Region: /NotchFilter_vlg_tst/i1/u6/lpm_mult_component
+# ** Warning: Design size of 4 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: NotchFilter_vlg_tst.i1.u1.niiil
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: NotchFilter_vlg_tst.i1.u2.niiil
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 2001 of file "din_sin.txt". (Current address [2001], address range [1:2000])    : D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/simulation/modelsim/NotchFilter.vt(79)
+#    Time: 0 ps  Iteration: 0  Instance: /NotchFilter_vlg_tst
+# Break key hit 
+# Break in Module altmult_add at C:/altera/modelsim/modelsim_ase/win32aloem/../altera/verilog/src/altera_mf.v line 36443
+# Simulation Breakpoint: Break in Module altmult_add at C:/altera/modelsim/modelsim_ase/win32aloem/../altera/verilog/src/altera_mf.v line 36443
+# MACRO ./NotchFilter_run_msim_rtl_verilog.do PAUSED at line 19

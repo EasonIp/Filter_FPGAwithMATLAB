@@ -1,0 +1,10 @@
+//这是MultiHalfBand.v的程序清单
+module MultiHalfBand (
+	reset_n,clk,Xin,
+	Yout,rdy);
+	
+	input		reset_n;    //复位信号，低电平有效
+	input		clk;        //FPGA系统时钟，频率为3.2kHz
+	input	  [7:0]	Xin;  //数据输入频率为3.2kHZ
+	output  [19:0]	Yout; //滤波后的输出数据
+	output rdy;          //数据有效指示信号,频率为输入数据速率的1/64

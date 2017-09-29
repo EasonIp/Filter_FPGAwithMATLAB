@@ -1,0 +1,67 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\FilterVerilog\Chapter_7\E7_3\Equalizer\simulation\modelsim
+vEqualizer
+IDARhbICoS2Rd>RAWJbbKz1
+VQ0N2G4LbYO`>m8jVWb5jV0
+Z1 dD:\FilterVerilog\Chapter_7\E7_3\Equalizer\simulation\modelsim
+w1403784892
+8D:/FilterVerilog/Chapter_7/E7_3/Equalizer/source/Equalizer.v
+FD:/FilterVerilog/Chapter_7/E7_3/Equalizer/source/Equalizer.v
+L0 2
+Z2 OV;L;10.1b;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+n@equalizer
+!i10b 1
+!s100 WGCfg1;1oUiR<B1g:<k^D0
+!s85 0
+!s108 1403784970.031000
+!s107 D:/FilterVerilog/Chapter_7/E7_3/Equalizer/source/Equalizer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_7/E7_3/Equalizer/source|D:/FilterVerilog/Chapter_7/E7_3/Equalizer/source/Equalizer.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_7/E7_3/Equalizer/source -O0
+vEqualizer_vlg_tst
+!i10b 1
+!s100 EIi<=?[`eR`d<9F6;0_9X0
+ICCSNClj17B]cXlffC^HYR1
+VEPW>jhl;P_Iol=U7o=k^T2
+R1
+w1403697371
+8D:/FilterVerilog/Chapter_7/E7_3/Equalizer/simulation/modelsim/Equalizer.vt
+FD:/FilterVerilog/Chapter_7/E7_3/Equalizer/simulation/modelsim/Equalizer.vt
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1403784970.328000
+!s107 D:/FilterVerilog/Chapter_7/E7_3/Equalizer/simulation/modelsim/Equalizer.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_7/E7_3/Equalizer/simulation/modelsim|D:/FilterVerilog/Chapter_7/E7_3/Equalizer/simulation/modelsim/Equalizer.vt|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_7/E7_3/Equalizer/simulation/modelsim -O0
+n@equalizer_vlg_tst
+vmult
+IGNlD9XfAa27lDP`mJVPHG0
+V3c7637z7RbQ`m]M<N7dAo3
+R1
+w1403614002
+8D:/FilterVerilog/Chapter_7/E7_3/Equalizer/mult.v
+FD:/FilterVerilog/Chapter_7/E7_3/Equalizer/mult.v
+L0 39
+R2
+r1
+31
+R3
+!i10b 1
+!s100 SKE]SDCmTdWkHBE74FE=92
+!s85 0
+!s108 1403784969.734000
+!s107 D:/FilterVerilog/Chapter_7/E7_3/Equalizer/mult.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_7/E7_3/Equalizer|D:/FilterVerilog/Chapter_7/E7_3/Equalizer/mult.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_7/E7_3/Equalizer -O0

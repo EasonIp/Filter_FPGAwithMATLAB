@@ -1,0 +1,102 @@
+// Copyright (C) 1991-2012 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "06/26/2014 22:07:18"
+                                                                                
+// Verilog Test Bench template for design : Antenna
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ps/ 1 ps
+module Antenna_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg clk;
+reg [15:0] rrin;
+reg rst;
+reg [15:0] x1i;
+reg [15:0] x1r;
+reg [15:0] x2i;
+reg [15:0] x2r;
+reg [15:0] x3i;
+reg [15:0] x3r;
+reg [15:0] x4i;
+reg [15:0] x4r;
+// wires                                               
+wire [15:0]  ei;
+wire [15:0]  er;
+wire [15:0]  w1i;
+wire [15:0]  w1r;
+wire [15:0]  w2i;
+wire [15:0]  w2r;
+wire [15:0]  w3i;
+wire [15:0]  w3r;
+wire [15:0]  w4i;
+wire [15:0]  w4r;
+wire [15:0]  yr;
+
+// assign statements (if any)                          
+Antenna i1 (
+// port map - connection between master ports and signals/registers   
+	.clk(clk),
+	.ei(ei),
+	.er(er),
+	.rrin(rrin),
+	.rst(rst),
+	.w1i(w1i),
+	.w1r(w1r),
+	.w2i(w2i),
+	.w2r(w2r),
+	.w3i(w3i),
+	.w3r(w3r),
+	.w4i(w4i),
+	.w4r(w4r),
+	.x1i(x1i),
+	.x1r(x1r),
+	.x2i(x2i),
+	.x2r(x2r),
+	.x3i(x3i),
+	.x3r(x3r),
+	.x4i(x4i),
+	.x4r(x4r),
+	.yr(yr)
+);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+                                                       
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+                                                       
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

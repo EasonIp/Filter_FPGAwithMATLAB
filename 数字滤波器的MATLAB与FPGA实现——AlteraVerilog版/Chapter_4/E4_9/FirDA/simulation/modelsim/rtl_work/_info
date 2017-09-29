@@ -1,0 +1,67 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\FilterVerilog\Chapter_4\E4_9\FirDA\simulation\modelsim
+vfir_par
+ISKH2zmBT@ECTJWo=Fe08=3
+V2WL:5Slb1UJCfb1^^?GlQ0
+Z1 dD:\FilterVerilog\Chapter_4\E4_9\FirDA\simulation\modelsim
+w1401541057
+8D:/FilterVerilog/Chapter_4/E4_9/FirDA/fir_par.vo
+FD:/FilterVerilog/Chapter_4/E4_9/FirDA/fir_par.vo
+L0 31
+Z2 OV;L;10.1b;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+!i10b 1
+!s100 18;bRPjO<0QU8<lnl0U?62
+!s85 0
+!s108 1401541570.796000
+!s107 D:/FilterVerilog/Chapter_4/E4_9/FirDA/fir_par.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_4/E4_9/FirDA|D:/FilterVerilog/Chapter_4/E4_9/FirDA/fir_par.vo|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_4/E4_9/FirDA -O0
+vFirIPDa
+I9<6dUkXSCXo<D0lD4N:cQ1
+V_FJk7gfzFfi?NaIORd?JD1
+R1
+w1401541559
+8D:/FilterVerilog/Chapter_4/E4_9/FirDA/source/FirIPDa.v
+FD:/FilterVerilog/Chapter_4/E4_9/FirDA/source/FirIPDa.v
+L0 2
+R2
+r1
+31
+R3
+n@fir@i@p@da
+!i10b 1
+!s100 ocKkP^aE^mmFPNAMD[QRj3
+!s85 0
+!s108 1401541571.218000
+!s107 D:/FilterVerilog/Chapter_4/E4_9/FirDA/source/FirIPDa.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_4/E4_9/FirDA/source|D:/FilterVerilog/Chapter_4/E4_9/FirDA/source/FirIPDa.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_4/E4_9/FirDA/source -O0
+vFirIPDa_vlg_tst
+!i10b 1
+!s100 eYmdUG7<c87;i_:G]WV9K1
+IELgARkU0i2]foGzk5[?LB2
+VH^7dzCOHl=BaAOXCG1lAl3
+R1
+w1401541526
+8D:/FilterVerilog/Chapter_4/E4_9/FirDA/simulation/modelsim/FirIPDa.vt
+FD:/FilterVerilog/Chapter_4/E4_9/FirDA/simulation/modelsim/FirIPDa.vt
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1401541571.437000
+!s107 D:/FilterVerilog/Chapter_4/E4_9/FirDA/simulation/modelsim/FirIPDa.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_4/E4_9/FirDA/simulation/modelsim|D:/FilterVerilog/Chapter_4/E4_9/FirDA/simulation/modelsim/FirIPDa.vt|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_4/E4_9/FirDA/simulation/modelsim -O0
+n@fir@i@p@da_vlg_tst

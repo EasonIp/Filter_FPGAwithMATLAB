@@ -1,0 +1,72 @@
+# Reading C:/altera/modelsim/modelsim_ase/tcl/vsim/pref.tcl 
+# ERROR: No extended dataflow license exists
+# do MisMatch_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\modelsim\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\modelsim\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_7/E7_2/MisMatch {D:/FilterVerilog/Chapter_7/E7_2/MisMatch/complexmult.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module complexmult_altmult_complex_8np
+# -- Compiling module complexmult
+# 
+# Top level modules:
+# 	complexmult
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_7/E7_2/MisMatch/source {D:/FilterVerilog/Chapter_7/E7_2/MisMatch/source/MisMatch.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module MisMatch
+# 
+# Top level modules:
+# 	MisMatch
+# 
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_7/E7_2/MisMatch/simulation/modelsim {D:/FilterVerilog/Chapter_7/E7_2/MisMatch/simulation/modelsim/MisMatch.vt}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module MisMatch_vlg_tst
+# 
+# Top level modules:
+# 	MisMatch_vlg_tst
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  MisMatch_vlg_tst
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps MisMatch_vlg_tst 
+# Loading work.MisMatch_vlg_tst
+# Loading work.MisMatch
+# Loading work.complexmult
+# Loading work.complexmult_altmult_complex_8np
+# Loading altera_mf_ver.altmult_add
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading lpm_ver.lpm_add_sub
+# Loading lpm_ver.lpm_compare
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $finish    : D:/FilterVerilog/Chapter_7/E7_2/MisMatch/simulation/modelsim/MisMatch.vt(72)
+#    Time: 35040 ns  Iteration: 0  Instance: /MisMatch_vlg_tst
+# 1
+# Break in Module MisMatch_vlg_tst at D:/FilterVerilog/Chapter_7/E7_2/MisMatch/simulation/modelsim/MisMatch.vt line 72
+# Simulation Breakpoint: 1
+# Break in Module MisMatch_vlg_tst at D:/FilterVerilog/Chapter_7/E7_2/MisMatch/simulation/modelsim/MisMatch.vt line 72
+# MACRO ./MisMatch_run_msim_rtl_verilog.do PAUSED at line 18
+add wave -position insertpoint  \
+sim:/MisMatch_vlg_tst/i1/wit
+add wave -position insertpoint  \
+sim:/MisMatch_vlg_tst/i1/wrt
+run -all
+# Break key hit 
+# Break in Module altmult_add at C:/altera/modelsim/modelsim_ase/win32aloem/../altera/verilog/src/altera_mf.v line 37801
+# Simulation Breakpoint: Break in Module altmult_add at C:/altera/modelsim/modelsim_ase/win32aloem/../altera/verilog/src/altera_mf.v line 37801
+# MACRO ./MisMatch_run_msim_rtl_verilog.do PAUSED at line 18
+run -all
+# Break key hit 
+# Simulation stop requested.
+# Simulation Breakpoint: Simulation stop requested.
+# MACRO ./MisMatch_run_msim_rtl_verilog.do PAUSED at line 18

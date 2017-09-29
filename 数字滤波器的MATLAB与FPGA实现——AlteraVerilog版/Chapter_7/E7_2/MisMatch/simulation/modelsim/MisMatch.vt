@@ -1,0 +1,175 @@
+// Copyright (C) 1991-2012 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "06/15/2014 21:00:16"
+                                                                                
+// Verilog Test Bench template for design : MisMatch
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ns/ 1 ns
+module MisMatch_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg clk;
+reg [15:0] ri;
+reg [15:0] rr;
+reg rst;
+reg [15:0] xi;
+reg [15:0] xr;
+// wires                                               
+wire clkdv;
+wire [15:0]  yi;
+wire [15:0]  yr;
+
+// assign statements (if any)                          
+MisMatch i1 (
+// port map - connection between master ports and signals/registers   
+	.clk(clk),
+	.clkdv(clkdv),
+	.ri(ri),
+	.rr(rr),
+	.rst(rst),
+	.xi(xi),
+	.xr(xr),
+	.yi(yi),
+	.yr(yr)
+);
+
+parameter clk_period=626; //设置时钟信号周期（频率）:1.6MHz
+parameter clk_period_data=clk_period*8;//数据周期
+parameter clk_half_period=clk_period/2;
+parameter data_num=8000;  //仿真数据长度
+parameter time_sim=data_num*clk_period/200; //仿真时间
+
+initial
+begin
+	//设置时钟信号初值
+	clk=1;
+	//设置复位信号
+	rst=1;
+	#10000 rst=0;
+	//设置仿真时间
+	#time_sim $finish;
+	//设置输入信号初值
+	//xr=16'd1;
+	// xi=16'd1;
+	// rr=16'd1;
+	// ri=16'd1;
+end
+
+
+
+//产生时钟信号
+always                                                 
+	#clk_half_period clk=~clk;
+
+	
+//从外部TX文件读入数据作为测试激励
+integer Pattern;
+reg [15:0] stimulus[1:data_num];
+initial
+begin
+   //文件必须放置在"工程目录\simulation\modelsim"路径下
+	$readmemb("E7_2_xi_in.txt",stimulus);
+	Pattern=0;
+	repeat(data_num)
+		begin
+			Pattern=Pattern+1;
+			xi=stimulus[Pattern];
+			#clk_period_data;//数据周期为时钟周期的8倍
+		end
+end
+
+
+integer Pattern2;
+reg [15:0] stimulus2[1:data_num];
+initial
+begin
+   //文件必须放置在"工程目录\simulation\modelsim"路径下
+	$readmemb("E7_2_xr_in.txt",stimulus2);
+	Pattern2=0;
+	repeat(data_num)
+		begin
+			Pattern2=Pattern2+1;
+			xr=stimulus2[Pattern2];
+			#clk_period_data;//数据周期为时钟周期的8倍
+		end
+end
+
+integer Pattern3;
+reg [15:0] stimulus3[1:data_num];
+initial
+begin
+   //文件必须放置在"工程目录\simulation\modelsim"路径下
+	$readmemb("E7_2_rr_in.txt",stimulus3);
+	Pattern3=0;
+	repeat(data_num)
+		begin
+			Pattern3=Pattern3+1;
+			rr=stimulus3[Pattern3];
+			#clk_period_data;//数据周期为时钟周期的8倍
+		end
+end
+
+integer Pattern4;
+reg [15:0] stimulus4[1:data_num];
+initial
+begin
+   //文件必须放置在"工程目录\simulation\modelsim"路径下
+	$readmemb("E7_2_ri_in.txt",stimulus4);
+	Pattern4=0;
+	repeat(data_num)
+		begin
+			Pattern4=Pattern4+1;
+			ri=stimulus4[Pattern4];
+			#clk_period_data;//数据周期为时钟周期的8倍
+		end
+end
+
+/*
+//将仿真数据dout写入外部TXT文件中(out.txt)
+integer file_out;
+initial 
+begin
+   //文件放置在"工程目录\simulation\modelsim"路径下                                                  
+	file_out = $fopen("Sout.txt");
+	if(!file_out)
+		begin
+			$display("could not open file!");
+			$finish;
+		end
+end
+wire rst_write;
+wire signed [19:0] dout_s;
+assign dout_s = Yout;                   //将dout转换成有符号数据
+assign rst_write = rdy& (reset_n);//产生写入时钟信号，复位状态时不写入数据
+always @(posedge rst_write )
+	$fdisplay(file_out,"%d",dout_s);
+
+*/	
+endmodule
+
+
+
+
+

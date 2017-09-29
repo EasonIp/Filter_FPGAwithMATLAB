@@ -1,0 +1,114 @@
+// Copyright (C) 1991-2012 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "05/24/2014 22:37:36"
+                                                                                
+// Verilog Test Bench template for design : FirFullSerial
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ns/ 1 ns //设置仿真时间单位:ns
+module FirFullSerial_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg [11:0] Xin;
+reg clk;
+reg rst;
+reg clk_data; //数据时钟，速率为系统时钟clk的1/8；
+// wires                                               
+wire [28:0]  Yout;
+
+// assign statements (if any)                          
+FirFullSerial i1 (
+// port map - connection between master ports and signals/registers   
+	.Xin(Xin),
+	.Yout(Yout),
+	.clk(clk),
+	.rst(rst)
+);
+
+parameter clk_period=625; //设置时钟信号周期（频率）:1.6MHz
+parameter clk_period_data=clk_period*8;
+parameter clk_half_period=clk_period/2;
+parameter clk_half_period_data=clk_half_period*8;
+parameter data_num=2000;  //仿真数据长度
+parameter time_sim=data_num*clk_period; //仿真时间
+
+initial
+begin
+	//设置时钟信号初值
+	clk=1;
+	clk_data=1;
+	//设置复位信号
+	rst=1;
+	#1000 rst=0;
+	//设置仿真时间
+	#time_sim $finish;
+	//设置输入信号初值
+	Xin=12'd10;
+end
+
+//产生时钟信号
+always                                                 
+	#clk_half_period clk=~clk;
+always
+	#clk_half_period_data clk_data=~clk_data;
+
+//从外部TX文件(SinIn.txt)读入数据作为测试激励
+integer Pattern;
+reg [11:0] stimulus[1:data_num];
+initial
+begin
+   //文件必须放置在"工程目录\simulation\modelsim"路径下
+	$readmemb("E4_7_Bin_noise.txt",stimulus);
+	//$readmemb("E4_7_Bin_s.txt",stimulus);
+	Pattern=0;
+	repeat(data_num)
+		begin
+			Pattern=Pattern+1;
+			Xin=stimulus[Pattern];
+			#clk_period_data;//数据周期为时钟周期的8倍
+		end
+end
+
+
+//将仿真数据dout写入外部TXT文件中(out.txt)
+integer file_out;
+initial 
+begin
+   //文件放置在"工程目录\simulation\modelsim"路径下                                                  
+	file_out = $fopen("E4_7_Noiseout.txt");
+	//file_out = $fopen("E4_7_Sout.txt");
+	if(!file_out)
+		begin
+			$display("could not open file!");
+			$finish;
+		end
+end
+wire rst_write;
+wire signed [28:0] dout_s;
+assign dout_s = Yout;                //将dout转换成有符号数据
+assign rst_write = clk_data & (!rst);//产生写入时钟信号，复位状态时不写入数据
+always @(posedge rst_write )
+	$fdisplay(file_out,"%d",dout_s);
+	
+endmodule

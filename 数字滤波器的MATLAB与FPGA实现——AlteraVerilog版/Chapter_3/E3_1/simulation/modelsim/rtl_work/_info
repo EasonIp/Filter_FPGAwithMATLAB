@@ -1,0 +1,47 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\FilterVerilog\Chapter_3\E3_1\simulation\modelsim
+vSymbExam
+Ib?VflVH[XWCBRIOWMCMV]3
+V2LbC8J1kL[DShM5AL=k573
+Z1 dD:\FilterVerilog\Chapter_3\E3_1\simulation\modelsim
+w1400405944
+8D:/FilterVerilog/Chapter_3/E3_1/source/SymbExam.v
+FD:/FilterVerilog/Chapter_3/E3_1/source/SymbExam.v
+L0 1
+Z2 OV;L;10.1b;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+n@symb@exam
+!i10b 1
+!s100 DXeFAdJY4JF81Z=T`i5V52
+!s85 0
+!s108 1400407890.453000
+!s107 D:/FilterVerilog/Chapter_3/E3_1/source/SymbExam.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_3/E3_1/source|D:/FilterVerilog/Chapter_3/E3_1/source/SymbExam.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_3/E3_1/source -O0
+vSymbExam_vlg_tst
+!i10b 1
+!s100 ZXz^M2=N5;_iM6_BZlmI00
+I7V@0XL[=1Sk:AdnHTgRVi3
+V89DiU]XXQX38fBICQ^k280
+R1
+w1400407872
+8D:/FilterVerilog/Chapter_3/E3_1/simulation/modelsim/SymbExam.vt
+FD:/FilterVerilog/Chapter_3/E3_1/simulation/modelsim/SymbExam.vt
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1400407890.609000
+!s107 D:/FilterVerilog/Chapter_3/E3_1/simulation/modelsim/SymbExam.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_3/E3_1/simulation/modelsim|D:/FilterVerilog/Chapter_3/E3_1/simulation/modelsim/SymbExam.vt|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_3/E3_1/simulation/modelsim -O0
+n@symb@exam_vlg_tst

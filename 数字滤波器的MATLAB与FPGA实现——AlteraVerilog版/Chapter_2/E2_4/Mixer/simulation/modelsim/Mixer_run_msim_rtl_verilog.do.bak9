@@ -1,0 +1,10 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+d:/FilterVerilog/Chapter_2/E2_4/Mixer {d:/FilterVerilog/Chapter_2/E2_4/Mixer/oc.vo}
+vlog -vlog01compat -work work +incdir+d:/FilterVerilog/Chapter_2/E2_4/Mixer/source {d:/FilterVerilog/Chapter_2/E2_4/Mixer/source/Mixer.v}
+

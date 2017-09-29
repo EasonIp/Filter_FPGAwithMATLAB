@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Jun 03 23:28:16 2014
+Quartus II 32-bit Version : 12.1 Build 177 11/07/2012 SJ Full Version
+Revision Name : CICIP
+Top-level Entity Name : CICIP
+Family : Cyclone IV E
+Total logic elements : 594
+    Total combinational functions : 439
+    Dedicated logic registers : 450
+Total registers : 450
+Total pins : 38
+Total virtual pins : 0
+Total memory bits : 80
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

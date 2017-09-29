@@ -1,0 +1,67 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\FilterVerilog\Chapter_2\E2_4\Mixer\simulation\modelsim
+vMixer
+ITh3Kf?D@GzD@5hn98f7^z1
+Vi=Bgek8i74jCmc0U<m^jV1
+Z1 dD:\FilterVerilog\Chapter_2\E2_4\Mixer\simulation\modelsim
+w1400344376
+8d:/FilterVerilog/Chapter_2/E2_4/Mixer/source/Mixer.v
+Fd:/FilterVerilog/Chapter_2/E2_4/Mixer/source/Mixer.v
+L0 1
+Z2 OV;L;10.1b;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+n@mixer
+!i10b 1
+!s100 =YV8aRQ;S0HfRKG;e1gIn1
+!s85 0
+!s108 1400344759.531000
+!s107 d:/FilterVerilog/Chapter_2/E2_4/Mixer/source/Mixer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+d:/FilterVerilog/Chapter_2/E2_4/Mixer/source|d:/FilterVerilog/Chapter_2/E2_4/Mixer/source/Mixer.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+d:/FilterVerilog/Chapter_2/E2_4/Mixer/source -O0
+vMixer_vlg_tst
+!i10b 1
+!s100 dONAI=:M=:A0?5791;RNj3
+IFSI?U^Qk:?f3fX_2@UKeM3
+VLdYdz3Pz8^:c_B=E9Hf7>3
+R1
+w1400344132
+8d:/FilterVerilog/Chapter_2/E2_4/Mixer/simulation/modelsim/Mixer.vt
+Fd:/FilterVerilog/Chapter_2/E2_4/Mixer/simulation/modelsim/Mixer.vt
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1400344759.765000
+!s107 d:/FilterVerilog/Chapter_2/E2_4/Mixer/simulation/modelsim/Mixer.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+d:/FilterVerilog/Chapter_2/E2_4/Mixer/simulation/modelsim|d:/FilterVerilog/Chapter_2/E2_4/Mixer/simulation/modelsim/Mixer.vt|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+d:/FilterVerilog/Chapter_2/E2_4/Mixer/simulation/modelsim -O0
+n@mixer_vlg_tst
+voc
+IdO2jzQ7h]D3_nHKO<`o871
+VFWUBF6<DC1G:XiB>53ace3
+R1
+w1400306127
+8d:/FilterVerilog/Chapter_2/E2_4/Mixer/oc.vo
+Fd:/FilterVerilog/Chapter_2/E2_4/Mixer/oc.vo
+L0 31
+R2
+r1
+31
+R3
+!i10b 1
+!s100 Km`jCYT>KIQ8?0>nXY6Wn0
+!s85 0
+!s108 1400344759.250000
+!s107 d:/FilterVerilog/Chapter_2/E2_4/Mixer/oc.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+d:/FilterVerilog/Chapter_2/E2_4/Mixer|d:/FilterVerilog/Chapter_2/E2_4/Mixer/oc.vo|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+d:/FilterVerilog/Chapter_2/E2_4/Mixer -O0

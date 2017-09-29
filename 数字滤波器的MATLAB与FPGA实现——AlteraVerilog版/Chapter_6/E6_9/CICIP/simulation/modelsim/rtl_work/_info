@@ -1,0 +1,68 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\FilterVerilog\Chapter_6\E6_9\CICIP\simulation\modelsim
+vCicFilter
+I;2j7Z0CFSQc5CUCYkOY1X3
+V9nfHMNY;zc:Kk49zgJn^I3
+Z1 dD:\FilterVerilog\Chapter_6\E6_9\CICIP\simulation\modelsim
+w1401809256
+8D:/FilterVerilog/Chapter_6/E6_9/CICIP/CicFilter.vo
+FD:/FilterVerilog/Chapter_6/E6_9/CICIP/CicFilter.vo
+L0 31
+Z2 OV;L;10.1b;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+n@cic@filter
+!i10b 1
+!s100 mS0VXUQ^A[KH2b76EkbDR1
+!s85 0
+!s108 1402151182.781000
+!s107 D:/FilterVerilog/Chapter_6/E6_9/CICIP/CicFilter.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_6/E6_9/CICIP|D:/FilterVerilog/Chapter_6/E6_9/CICIP/CicFilter.vo|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_6/E6_9/CICIP -O0
+vCICIP
+IA^WklYdgXN<bQjFoaO]Gf1
+V_d`j@>`LHBnHOzQKoUGLC2
+R1
+w1401811651
+8D:/FilterVerilog/Chapter_6/E6_9/CICIP/source/CICIP.v
+FD:/FilterVerilog/Chapter_6/E6_9/CICIP/source/CICIP.v
+L0 1
+R2
+r1
+31
+R3
+n@c@i@c@i@p
+!i10b 1
+!s100 hNOcU5baZeh@D;nanFf]F0
+!s85 0
+!s108 1402151183.156000
+!s107 D:/FilterVerilog/Chapter_6/E6_9/CICIP/source/CICIP.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_6/E6_9/CICIP/source|D:/FilterVerilog/Chapter_6/E6_9/CICIP/source/CICIP.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_6/E6_9/CICIP/source -O0
+vCICIP_vlg_tst
+!i10b 1
+!s100 <0z?^MLRo=kPQ_KM@N:S?0
+Im>g`z5XQUKXQ:G;fnFT1F0
+V3ob>7]86@]P2:gMG`42dk2
+R1
+w1401809839
+8D:/FilterVerilog/Chapter_6/E6_9/CICIP/simulation/modelsim/CICIP.vt
+FD:/FilterVerilog/Chapter_6/E6_9/CICIP/simulation/modelsim/CICIP.vt
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1402151183.359000
+!s107 D:/FilterVerilog/Chapter_6/E6_9/CICIP/simulation/modelsim/CICIP.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_6/E6_9/CICIP/simulation/modelsim|D:/FilterVerilog/Chapter_6/E6_9/CICIP/simulation/modelsim/CICIP.vt|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_6/E6_9/CICIP/simulation/modelsim -O0
+n@c@i@c@i@p_vlg_tst

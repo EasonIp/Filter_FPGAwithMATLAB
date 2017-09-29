@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sat Jun 07 23:28:35 2014
+Quartus II 32-bit Version : 12.1 Build 177 11/07/2012 SJ Full Version
+Revision Name : MultCIC
+Top-level Entity Name : MultCIC
+Family : Cyclone IV E
+Device : EP4CE15F17C8
+Timing Models : Final
+Total logic elements : 233 / 15,408 ( 2 % )
+    Total combinational functions : 208 / 15,408 ( 1 % )
+    Dedicated logic registers : 140 / 15,408 ( < 1 % )
+Total registers : 140
+Total pins : 30 / 166 ( 18 % )
+Total virtual pins : 0
+Total memory bits : 0 / 516,096 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

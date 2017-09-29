@@ -1,0 +1,87 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\FilterVerilog\Chapter_4\E4_7\FirFullSerial\simulation\modelsim
+vadder
+IAG<hS87@]JGFgRYDoZT4L1
+VgACW3b>?22XdDk=4b8>iQ2
+Z1 dD:\FilterVerilog\Chapter_4\E4_7\FirFullSerial\simulation\modelsim
+w1401112364
+8D:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/ipcore/adder.v
+FD:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/ipcore/adder.v
+L0 39
+Z2 OV;L;10.1b;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/ipcore -O0
+!i10b 1
+!s100 c92zN@OUYG0]GL<NVNZCK1
+!s85 0
+!s108 1401114070.890000
+!s107 D:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/ipcore/adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/ipcore|D:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/ipcore/adder.v|
+!s101 -O0
+vFirFullSerial
+IGeCm8^LRf;1[F71Azz@I83
+VRZlPzd6Y^Rc]S?:fNA3^Q0
+R1
+w1401113954
+8D:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/source/FirFullSerial.v
+FD:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/source/FirFullSerial.v
+L0 2
+R2
+r1
+31
+R3
+n@fir@full@serial
+!i10b 1
+!s100 ;fBfQjVzOhZm9;C>ok;=92
+!s85 0
+!s108 1401114070.687000
+!s107 D:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/source/FirFullSerial.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/source|D:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/source/FirFullSerial.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/source -O0
+vFirFullSerial_vlg_tst
+!i10b 1
+!s100 Lm8k08m5;_4j8niPY2cmN0
+In?NNY5RgJMjL7dE]eRnHo0
+V3Mh_AO844K4A97MeGRf973
+R1
+w1401114060
+8D:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/simulation/modelsim/FirFullSerial.vt
+FD:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/simulation/modelsim/FirFullSerial.vt
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1401114071.312000
+!s107 D:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/simulation/modelsim/FirFullSerial.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/simulation/modelsim|D:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/simulation/modelsim/FirFullSerial.vt|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/simulation/modelsim -O0
+n@fir@full@serial_vlg_tst
+vmult
+IQ03C:FA:j;RU6bPhX5EkT0
+V>?U2WF]@S;K6K<a_=foUN1
+R1
+w1400941509
+8D:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/ipcore/mult.v
+FD:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/ipcore/mult.v
+L0 39
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 _ObQd^[INd@0ka4lcWnG^0
+!s85 0
+!s108 1401114071.109000
+!s107 D:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/ipcore/mult.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/ipcore|D:/FilterVerilog/Chapter_4/E4_7/FirFullSerial/ipcore/mult.v|
+!s101 -O0

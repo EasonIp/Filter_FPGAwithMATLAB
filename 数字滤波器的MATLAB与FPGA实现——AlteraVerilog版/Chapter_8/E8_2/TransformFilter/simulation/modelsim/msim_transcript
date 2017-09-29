@@ -1,0 +1,171 @@
+# Reading C:/altera/modelsim/modelsim_ase/tcl/vsim/pref.tcl 
+# ERROR: No extended dataflow license exists
+# do TransformFilter_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\modelsim\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\modelsim\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_8/E8_2/TransformFilter {D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/fft256.vo}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module fft256
+# 
+# Top level modules:
+# 	fft256
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/source {D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/source/TransformFilter.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module TransformFilter
+# 
+# Top level modules:
+# 	TransformFilter
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_8/E8_2/TransformFilter {D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/shifter12_128.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module shifter12_128
+# 
+# Top level modules:
+# 	shifter12_128
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/source {D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/source/window.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module window
+# 
+# Top level modules:
+# 	window
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_8/E8_2/TransformFilter {D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/shifter16_2048.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module shifter16_2048
+# 
+# Top level modules:
+# 	shifter16_2048
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_8/E8_2/TransformFilter {D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/rom12_256.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module rom12_256
+# 
+# Top level modules:
+# 	rom12_256
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_8/E8_2/TransformFilter {D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/mult12_12.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module mult12_12
+# 
+# Top level modules:
+# 	mult12_12
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_8/E8_2/TransformFilter {D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/dram16_256.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module dram16_256
+# 
+# Top level modules:
+# 	dram16_256
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/source {D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/source/fftfilter.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module fftfilter
+# 
+# Top level modules:
+# 	fftfilter
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_8/E8_2/TransformFilter {D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/shifter16_256.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module shifter16_256
+# 
+# Top level modules:
+# 	shifter16_256
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/source {D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/source/ifftout.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module ifftout
+# 
+# Top level modules:
+# 	ifftout
+# 
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/simulation/modelsim {D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/simulation/modelsim/TransformFilter.vt}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module TransformFilter_vlg_tst
+# 
+# Top level modules:
+# 	TransformFilter_vlg_tst
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  TransformFilter_vlg_tst
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps TransformFilter_vlg_tst 
+# Loading work.TransformFilter_vlg_tst
+# Loading work.TransformFilter
+# Loading work.window
+# Loading work.shifter12_128
+# Loading altera_mf_ver.altshift_taps
+# Loading work.rom12_256
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.mult12_12
+# Loading lpm_ver.lpm_mult
+# Loading lpm_ver.LPM_HINT_EVALUATION
+# Loading work.dram16_256
+# Loading work.shifter16_2048
+# Loading work.fftfilter
+# Loading work.fft256
+# Loading lpm_ver.lpm_add_sub
+# Loading sgate_ver.oper_add
+# Loading sgate_ver.oper_less_than
+# Loading sgate_ver.oper_mux
+# Loading sgate_ver.oper_selector
+# Loading altera_mf_ver.scfifo
+# Loading work.shifter16_256
+# Loading work.ifftout
+# ** Warning: (vsim-3016) D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/fft256.vo(15369): Port type is incompatible with connection (port 'clock').
+# 
+#         Region: /TransformFilter_vlg_tst/i1/u1/u0/nlllOli
+# ** Warning: (vsim-3016) D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/fft256.vo(15387): Port type is incompatible with connection (port 'clock').
+# 
+#         Region: /TransformFilter_vlg_tst/i1/u1/u0/nlllOll
+# ** Warning: (vsim-3016) D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/fft256.vo(15405): Port type is incompatible with connection (port 'clock').
+# 
+#         Region: /TransformFilter_vlg_tst/i1/u1/u0/nlllOlO
+# ** Warning: (vsim-3016) D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/mult12_12.v(60): Port type is incompatible with connection (port 'clock').
+# 
+#         Region: /TransformFilter_vlg_tst/i1/u1/u1/lpm_mult_component
+# ** Warning: (vsim-3016) D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/mult12_12.v(60): Port type is incompatible with connection (port 'clock').
+# 
+#         Region: /TransformFilter_vlg_tst/i1/u1/u2/lpm_mult_component
+# ** Warning: (vsim-3016) D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/mult12_12.v(60): Port type is incompatible with connection (port 'clock').
+# 
+#         Region: /TransformFilter_vlg_tst/i1/u1/u5/lpm_mult_component
+# ** Warning: (vsim-3016) D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/mult12_12.v(60): Port type is incompatible with connection (port 'clock').
+# 
+#         Region: /TransformFilter_vlg_tst/i1/u1/u6/lpm_mult_component
+# ** Warning: (vsim-3016) D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/fft256.vo(15369): Port type is incompatible with connection (port 'clock').
+# 
+#         Region: /TransformFilter_vlg_tst/i1/u2/u0/nlllOli
+# ** Warning: (vsim-3016) D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/fft256.vo(15387): Port type is incompatible with connection (port 'clock').
+# 
+#         Region: /TransformFilter_vlg_tst/i1/u2/u0/nlllOll
+# ** Warning: (vsim-3016) D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/fft256.vo(15405): Port type is incompatible with connection (port 'clock').
+# 
+#         Region: /TransformFilter_vlg_tst/i1/u2/u0/nlllOlO
+# ** Warning: Design size of 12 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: TransformFilter_vlg_tst.i1.u0.u4.altsyncram_component
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: TransformFilter_vlg_tst.i1.u0.u5.altsyncram_component
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: TransformFilter_vlg_tst.i1.u1.u0.ni0Oii
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: TransformFilter_vlg_tst.i1.u2.u0.ni0Oii
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: TransformFilter_vlg_tst.i1.u2.u1.altsyncram_component
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: TransformFilter_vlg_tst.i1.u2.u2.altsyncram_component
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 4801 of file "E8_2_Bin_s.txt". (Current address [4801], address range [1:4800])    : D:/FilterVerilog/Chapter_8/E8_2/TransformFilter/simulation/modelsim/TransformFilter.vt(86)
+#    Time: 0 ps  Iteration: 0  Instance: /TransformFilter_vlg_tst
+# Break key hit 
+# Simulation stop requested.
+# Simulation Breakpoint: Simulation stop requested.
+# MACRO ./TransformFilter_run_msim_rtl_verilog.do PAUSED at line 27

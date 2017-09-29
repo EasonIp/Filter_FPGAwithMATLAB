@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Jun 03 23:28:33 2014
+Quartus II 32-bit Version : 12.1 Build 177 11/07/2012 SJ Full Version
+Revision Name : CICIP
+Top-level Entity Name : CICIP
+Family : Cyclone IV E
+Device : EP4CE15F17C8
+Timing Models : Final
+Total logic elements : 584 / 15,408 ( 4 % )
+    Total combinational functions : 439 / 15,408 ( 3 % )
+    Dedicated logic registers : 450 / 15,408 ( 3 % )
+Total registers : 450
+Total pins : 38 / 166 ( 23 % )
+Total virtual pins : 0
+Total memory bits : 80 / 516,096 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

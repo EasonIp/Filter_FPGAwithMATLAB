@@ -1,0 +1,67 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\FilterVerilog\Chapter_4\E4_8\FirParallel\simulation\modelsim
+vFirParallel
+IXXJ1j;]an>4RQ2PYbHRHT2
+VhhKSf7Ui`oRGomzDZiPE;1
+Z1 dD:\FilterVerilog\Chapter_4\E4_8\FirParallel\simulation\modelsim
+w1401281302
+8D:/FilterVerilog/Chapter_4/E4_8/FirParallel/source/FirParallel.v
+FD:/FilterVerilog/Chapter_4/E4_8/FirParallel/source/FirParallel.v
+L0 2
+Z2 OV;L;10.1b;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+n@fir@parallel
+!i10b 1
+!s100 nE0zkfU@Q_6j0Ni5A[10_2
+!s85 0
+!s108 1401454025.656000
+!s107 D:/FilterVerilog/Chapter_4/E4_8/FirParallel/source/FirParallel.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_4/E4_8/FirParallel/source|D:/FilterVerilog/Chapter_4/E4_8/FirParallel/source/FirParallel.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_4/E4_8/FirParallel/source -O0
+vFirParallel_vlg_tst
+!i10b 1
+!s100 7RV`[kVe_^Y``S`JeYFiL3
+IV6L=zih0OZgScDl5oM<I_3
+V9VY=zPzLPSla4j6GKWTCE0
+R1
+w1401171037
+8D:/FilterVerilog/Chapter_4/E4_8/FirParallel/simulation/modelsim/FirParallel.vt
+FD:/FilterVerilog/Chapter_4/E4_8/FirParallel/simulation/modelsim/FirParallel.vt
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1401454026.359000
+!s107 D:/FilterVerilog/Chapter_4/E4_8/FirParallel/simulation/modelsim/FirParallel.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_4/E4_8/FirParallel/simulation/modelsim|D:/FilterVerilog/Chapter_4/E4_8/FirParallel/simulation/modelsim/FirParallel.vt|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_4/E4_8/FirParallel/simulation/modelsim -O0
+n@fir@parallel_vlg_tst
+vmult
+IPKgl5cLAceI=U4c>F7]mV1
+V>?U2WF]@S;K6K<a_=foUN1
+R1
+w1401117726
+8D:/FilterVerilog/Chapter_4/E4_8/FirParallel/ipcore/mult.v
+FD:/FilterVerilog/Chapter_4/E4_8/FirParallel/ipcore/mult.v
+L0 39
+R2
+r1
+31
+R3
+!i10b 1
+!s100 boljC`Dee]a89[Gn]TSX50
+!s85 0
+!s108 1401454026.140000
+!s107 D:/FilterVerilog/Chapter_4/E4_8/FirParallel/ipcore/mult.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_4/E4_8/FirParallel/ipcore|D:/FilterVerilog/Chapter_4/E4_8/FirParallel/ipcore/mult.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_4/E4_8/FirParallel/ipcore -O0

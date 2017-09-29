@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed May 28 20:48:34 2014
+Quartus II 32-bit Version : 12.1 Build 177 11/07/2012 SJ Full Version
+Revision Name : FirFullSerial
+Top-level Entity Name : FirParallel
+Family : Cyclone IV E
+Total logic elements : 517
+    Total combinational functions : 296
+    Dedicated logic registers : 354
+Total registers : 354
+Total pins : 43
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 16
+Total PLLs : 0

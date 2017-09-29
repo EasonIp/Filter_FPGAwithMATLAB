@@ -1,0 +1,17 @@
+IMPLEMENTATION_STYLE=AUTO
+INTENDED_DEVICE_FAMILY="Cyclone IV E"
+PIPELINE=3
+REPRESENTATION_A=SIGNED
+REPRESENTATION_B=SIGNED
+WIDTH_A=16
+WIDTH_B=16
+WIDTH_RESULT=33
+DEVICE_FAMILY="Cyclone IV E"
+aclr
+clock
+dataa_imag
+dataa_real
+datab_imag
+datab_real
+result_imag
+result_real

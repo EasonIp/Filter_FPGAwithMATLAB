@@ -1,0 +1,167 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\FilterVerilog\Chapter_6\E6_11\MultiHalfBand\simulation\modelsim
+vhf_1
+Io1HzRd`9TUlB@fdaj:X4C3
+Vga@c8X9;X?AGAC`=j3Lk@2
+Z1 dD:\FilterVerilog\Chapter_6\E6_11\MultiHalfBand\simulation\modelsim
+w1402200002
+8D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_1.vo
+FD:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_1.vo
+L0 31
+Z2 OV;L;10.1b;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand -O0
+!i10b 1
+!s100 a8jQJ3j>lz]c2O1ZCalcY0
+!s85 0
+!s108 1402228557.140000
+!s107 D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_1.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand|D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_1.vo|
+!s101 -O0
+vhf_2
+IC?k@dA@clj7MG2@NYbIKd1
+VFaIAOOglLEo=7Fd`DaK;H1
+R1
+w1402200106
+8D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_2.vo
+FD:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_2.vo
+L0 31
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 z0C_a_>S=jPKZNKz=gM0<1
+!s85 0
+!s108 1402228557.468000
+!s107 D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_2.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand|D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_2.vo|
+!s101 -O0
+vhf_3
+IgkIm:2PmzF4D:1HGj^34m1
+V9Z2[;<jgOD:azbMfo`cD[3
+R1
+w1402200225
+8D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_3.vo
+FD:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_3.vo
+L0 31
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 C2lA[aBjL>^Wne33nh?J^0
+!s85 0
+!s108 1402228557.875000
+!s107 D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_3.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand|D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_3.vo|
+!s101 -O0
+vhf_4
+Ini_g`BY37AzQ17n8:`]J53
+VzPEi[@1LedJZZ[6a4HhQZ2
+R1
+w1402194703
+8D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_4.vo
+FD:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_4.vo
+L0 31
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 R7Q>^XaI9C1dOZiEFRaT93
+!s85 0
+!s108 1402228558.328000
+!s107 D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_4.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand|D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_4.vo|
+!s101 -O0
+vhf_5
+IoCAagPe<:O7hnm[1G3Ub30
+Vge0B=DYLgLbK9Uzk><C5R2
+R1
+w1402195173
+8D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_5.vo
+FD:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_5.vo
+L0 31
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 lEN@cWMbzD^mSQ:LlV4n`2
+!s85 0
+!s108 1402228558.875000
+!s107 D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_5.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand|D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_5.vo|
+!s101 -O0
+vhf_6
+I@LN1cE71i>MmihAMIQ<3=3
+V1[d]Cz=DXjI[:4jEIO^j73
+R1
+w1402195416
+8D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_6.vo
+FD:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_6.vo
+L0 31
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 b[<?lV:Ld5HMU=NIfZDgh2
+!s85 0
+!s108 1402228559.531000
+!s107 D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_6.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand|D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/hf_6.vo|
+!s101 -O0
+vMultiHalfBand
+I5CLIXB@;FYe7MdiFmVAe@2
+VLkVdhEFKI@W@CYXQ]<4OD0
+R1
+w1402228523
+8D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/source/MultiHalfBand.v
+FD:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/source/MultiHalfBand.v
+L0 2
+R2
+r1
+31
+R3
+n@multi@half@band
+!i10b 1
+!s100 TS1lRI:h>BLI0Q:MehWL;2
+!s85 0
+!s108 1402228560.500000
+!s107 D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/source/MultiHalfBand.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/source|D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/source/MultiHalfBand.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/source -O0
+vMultiHalfBand_vlg_tst
+!i10b 1
+!s100 ^AGFFz2TRb`ilLFJG@^ic3
+IAZkD:=klD;nm?:5a46Ph[2
+Vzcfg00bb0eIW=?g@PRkZa0
+R1
+w1402226672
+8D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/simulation/modelsim/MultiHalfBand.vt
+FD:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/simulation/modelsim/MultiHalfBand.vt
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1402228560.968000
+!s107 D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/simulation/modelsim/MultiHalfBand.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/simulation/modelsim|D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/simulation/modelsim/MultiHalfBand.vt|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_6/E6_11/MultiHalfBand/simulation/modelsim -O0
+n@multi@half@band_vlg_tst

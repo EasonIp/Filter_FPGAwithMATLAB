@@ -1,0 +1,139 @@
+Flow report for FirFullSerial
+Wed May 28 20:49:02 2014
+Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------+
+; Flow Summary                                                                   ;
++------------------------------------+-------------------------------------------+
+; Flow Status                        ; Successful - Wed May 28 20:49:02 2014     ;
+; Quartus II 32-bit Version          ; 12.1 Build 177 11/07/2012 SJ Full Version ;
+; Revision Name                      ; FirFullSerial                             ;
+; Top-level Entity Name              ; FirParallel                               ;
+; Family                             ; Cyclone IV E                              ;
+; Device                             ; EP4CE15F17C8                              ;
+; Timing Models                      ; Final                                     ;
+; Total logic elements               ; 517 / 15,408 ( 3 % )                      ;
+;     Total combinational functions  ; 296 / 15,408 ( 2 % )                      ;
+;     Dedicated logic registers      ; 354 / 15,408 ( 2 % )                      ;
+; Total registers                    ; 354                                       ;
+; Total pins                         ; 43 / 166 ( 26 % )                         ;
+; Total virtual pins                 ; 0                                         ;
+; Total memory bits                  ; 0 / 516,096 ( 0 % )                       ;
+; Embedded Multiplier 9-bit elements ; 16 / 112 ( 14 % )                         ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                             ;
++------------------------------------+-------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 05/28/2014 20:48:31 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; FirFullSerial       ;
++-------------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                            ;
++--------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
++--------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 827313738527.140128131001772          ; --            ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; i1                                    ; --            ; --          ; FirParallel    ;
+; EDA_ENABLE_GLITCH_FILTERING          ; On                                    ; --            ; --          ; eda_simulation ;
+; EDA_MAP_ILLEGAL_CHARACTERS           ; On                                    ; --            ; --          ; eda_simulation ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; FirParallel                           ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/FirParallel.vt    ; --            ; --          ; FirParallel    ;
+; EDA_TEST_BENCH_MODULE_NAME           ; FirParallel_vlg_tst                   ; --            ; --          ; FirParallel    ;
+; EDA_TEST_BENCH_NAME                  ; FirParallel                           ; --            ; --          ; eda_simulation ;
+; EDA_TIME_SCALE                       ; 1 ps                                  ; --            ; --          ; eda_simulation ;
+; IP_TOOL_NAME                         ; LPM_MULT                              ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                      ; 12.1                                  ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --             ;
+; MISC_FILE                            ; ipcore/mult_bb.v                      ; --            ; --          ; --             ;
+; PARTITION_COLOR                      ; 16764057                              ; --            ; FirParallel ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; FirParallel ; Top            ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; FirParallel ; Top            ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                     ; FirParallel                           ; FirFullSerial ; --          ; --             ;
++--------------------------------------+---------------------------------------+---------------+-------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 307 MB              ; 00:00:03                           ;
+; Fitter                    ; 00:00:13     ; 1.0                     ; 442 MB              ; 00:00:11                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 309 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.8                     ; 332 MB              ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 259 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:24     ; --                      ; --                  ; 00:00:21                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                         ;
++---------------------------+------------------+------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++---------------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis      ; 20120612-2332    ; Windows XP ; 5.1        ; i686           ;
+; Fitter                    ; 20120612-2332    ; Windows XP ; 5.1        ; i686           ;
+; Assembler                 ; 20120612-2332    ; Windows XP ; 5.1        ; i686           ;
+; TimeQuest Timing Analyzer ; 20120612-2332    ; Windows XP ; 5.1        ; i686           ;
+; EDA Netlist Writer        ; 20120612-2332    ; Windows XP ; 5.1        ; i686           ;
++---------------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off FirParallel -c FirFullSerial
+quartus_fit --read_settings_files=off --write_settings_files=off FirParallel -c FirFullSerial
+quartus_asm --read_settings_files=off --write_settings_files=off FirParallel -c FirFullSerial
+quartus_sta FirParallel -c FirFullSerial
+quartus_eda --read_settings_files=off --write_settings_files=off FirParallel -c FirFullSerial
+
+
+

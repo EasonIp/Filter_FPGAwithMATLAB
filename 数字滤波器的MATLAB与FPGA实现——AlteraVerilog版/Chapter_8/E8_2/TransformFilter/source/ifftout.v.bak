@@ -1,0 +1,12 @@
+//这是ifftout.v文件的程序清单
+module ifftout (
+	rst,clk,clkdv,addr,xk_re,xk_im,
+	dout);
+	
+	input		rst;   //复位信号，高电平有效
+	input		clk;   //FPGA系统时钟，频率为数据速率的16倍：64MHz
+	input		clkdv; //16分频后的时钟：4MHz
+	input	 [11:0]	addr;         //输入数据序号
+	input signed [15:0]	xk_re;   //fft变换后的实部信号
+	input signed [15:0]	xk_im;   //fft变换后的虚部信号
+	output signed [15:0] dout;    //滤波后的输出数据

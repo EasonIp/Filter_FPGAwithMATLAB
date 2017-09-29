@@ -1,0 +1,128 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\FilterVerilog\Chapter_9\E9_1\Dpsk\simulation\modelsim
+vdds
+I7fP[B@]RglgP3[1DjAG4i1
+Vl;a2?Q7im=mkO6k;DmLGm1
+Z1 dD:\FilterVerilog\Chapter_9\E9_1\Dpsk\simulation\modelsim
+w1407641461
+8D:/FilterVerilog/Chapter_9/E9_1/Dpsk/dds.vo
+FD:/FilterVerilog/Chapter_9/E9_1/Dpsk/dds.vo
+L0 31
+Z2 OV;L;10.1b;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_9/E9_1/Dpsk -O0
+!i10b 1
+!s100 ojJRUi@:m>k8fbReSm]Z;1
+!s85 0
+!s108 1407683578.109000
+!s107 D:/FilterVerilog/Chapter_9/E9_1/Dpsk/dds.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_9/E9_1/Dpsk|D:/FilterVerilog/Chapter_9/E9_1/Dpsk/dds.vo|
+!s101 -O0
+vDpsk
+I>U@g1GMCY?NPz=N[S:TCQ0
+VQJJVR`HiTAYJ=825e:aRd1
+R1
+w1407680579
+8D:/FilterVerilog/Chapter_9/E9_1/Dpsk/source/Dpsk.v
+FD:/FilterVerilog/Chapter_9/E9_1/Dpsk/source/Dpsk.v
+L0 2
+R2
+r1
+31
+R3
+n@dpsk
+Z5 !s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_9/E9_1/Dpsk/source -O0
+!i10b 1
+!s100 KF5Nk]Mhe1gig2Kile4^b0
+!s85 0
+!s108 1407683578.875000
+!s107 D:/FilterVerilog/Chapter_9/E9_1/Dpsk/source/Dpsk.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_9/E9_1/Dpsk/source|D:/FilterVerilog/Chapter_9/E9_1/Dpsk/source/Dpsk.v|
+!s101 -O0
+vDpsk_vlg_tst
+!i10b 1
+!s100 7KCW9g2D;=?7nB>eSUH7V1
+IifaUMY<8aiW1bhdTf;nC_0
+V;J:S30Kc@ZL7LA_Bgoz<d0
+R1
+w1407683566
+8D:/FilterVerilog/Chapter_9/E9_1/Dpsk/simulation/modelsim/Dpsk.vt
+FD:/FilterVerilog/Chapter_9/E9_1/Dpsk/simulation/modelsim/Dpsk.vt
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1407683579.281000
+!s107 D:/FilterVerilog/Chapter_9/E9_1/Dpsk/simulation/modelsim/Dpsk.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_9/E9_1/Dpsk/simulation/modelsim|D:/FilterVerilog/Chapter_9/E9_1/Dpsk/simulation/modelsim/Dpsk.vt|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_9/E9_1/Dpsk/simulation/modelsim -O0
+n@dpsk_vlg_tst
+vlpf
+I0C0OJ5T[J:_KM[5;^m>Qb3
+VHgV7<d6XIXUZgO:SkhCNY1
+R1
+w1407659960
+8D:/FilterVerilog/Chapter_9/E9_1/Dpsk/lpf.vo
+FD:/FilterVerilog/Chapter_9/E9_1/Dpsk/lpf.vo
+L0 31
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 iQ:TjoCf<V2P8U`j]?KX50
+!s85 0
+!s108 1407683578.328000
+!s107 D:/FilterVerilog/Chapter_9/E9_1/Dpsk/lpf.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_9/E9_1/Dpsk|D:/FilterVerilog/Chapter_9/E9_1/Dpsk/lpf.vo|
+!s101 -O0
+vmult
+IzhOfAhQIY>0_KIz:XG3F?3
+Vfe?gj3M_m0?`IhdSL]enO1
+R1
+w1407680512
+8D:/FilterVerilog/Chapter_9/E9_1/Dpsk/mult.v
+FD:/FilterVerilog/Chapter_9/E9_1/Dpsk/mult.v
+L0 39
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 k]gX_WiMb`;`K_I@f@GoK3
+!s85 0
+!s108 1407683578.734000
+!s107 D:/FilterVerilog/Chapter_9/E9_1/Dpsk/mult.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_9/E9_1/Dpsk|D:/FilterVerilog/Chapter_9/E9_1/Dpsk/mult.v|
+!s101 -O0
+vPD_LoopFilter
+INeLB5dC^:m5KGhW5j;=d40
+VP2KUl7h5]PeHBQ9g>dCZ01
+R1
+w1407680370
+8D:/FilterVerilog/Chapter_9/E9_1/Dpsk/source/PD_LoopFilter.v
+FD:/FilterVerilog/Chapter_9/E9_1/Dpsk/source/PD_LoopFilter.v
+L0 2
+R2
+r1
+31
+R3
+R5
+n@p@d_@loop@filter
+!i10b 1
+!s100 d53`Ih^Clb`FN7=R74UFn2
+!s85 0
+!s108 1407683579.046000
+!s107 D:/FilterVerilog/Chapter_9/E9_1/Dpsk/source/PD_LoopFilter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_9/E9_1/Dpsk/source|D:/FilterVerilog/Chapter_9/E9_1/Dpsk/source/PD_LoopFilter.v|
+!s101 -O0

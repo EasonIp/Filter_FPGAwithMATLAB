@@ -1,0 +1,9 @@
+//这是IIRDirect.v文件的程序清单
+module IIRDirect (
+	rst,clk,Yin,
+	Yout);
+	
+	input		rst;   //复位信号，高电平有效
+	input		clk;   //FPGA系统时钟，频率为2kHz
+	input	 signed [11:0]	Yin;  //数据输入频率为2kHZ
+	output signed [25:0]	Yout; //滤波后的输出数据

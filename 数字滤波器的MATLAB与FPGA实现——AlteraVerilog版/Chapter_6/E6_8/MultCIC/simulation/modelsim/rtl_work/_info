@@ -1,0 +1,110 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\FilterVerilog\Chapter_6\E6_8\MultCIC\simulation\modelsim
+vComb
+ICQ:FQh`^8O2J?Gk@EfeUa2
+V9DHRGYd_=:TLQoD7;e7ce1
+Z1 dD:\FilterVerilog\Chapter_6\E6_8\MultCIC\simulation\modelsim
+w1401720002
+8D:/FilterVerilog/Chapter_6/E6_8/MultCIC/source/Comb.v
+FD:/FilterVerilog/Chapter_6/E6_8/MultCIC/source/Comb.v
+L0 2
+Z2 OV;L;10.1b;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_6/E6_8/MultCIC/source -O0
+n@comb
+!i10b 1
+!s100 gHWBi2k9ZNYzfoAV3A^0M0
+!s85 0
+!s108 1402151148.109000
+!s107 D:/FilterVerilog/Chapter_6/E6_8/MultCIC/source/Comb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_6/E6_8/MultCIC/source|D:/FilterVerilog/Chapter_6/E6_8/MultCIC/source/Comb.v|
+!s101 -O0
+vDecimate
+Iz@k0W5N4gERo0mA4]SKRo3
+VHBk?kfVT6^NKb^[BO^Wag2
+R1
+w1401717709
+8D:/FilterVerilog/Chapter_6/E6_8/MultCIC/source/Decimate.v
+FD:/FilterVerilog/Chapter_6/E6_8/MultCIC/source/Decimate.v
+L0 2
+R2
+r1
+31
+R3
+R4
+n@decimate
+!i10b 1
+!s100 hTYz7Sn]mT_z>n`QzlGnR1
+!s85 0
+!s108 1402151147.906000
+!s107 D:/FilterVerilog/Chapter_6/E6_8/MultCIC/source/Decimate.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_6/E6_8/MultCIC/source|D:/FilterVerilog/Chapter_6/E6_8/MultCIC/source/Decimate.v|
+!s101 -O0
+vIntegrated
+I^5GQS@jdV?:P=G8DUPDfE1
+VkBz0RO4jQRfmFzK7dEOaH2
+R1
+w1401719856
+8D:/FilterVerilog/Chapter_6/E6_8/MultCIC/source/Integrated.v
+FD:/FilterVerilog/Chapter_6/E6_8/MultCIC/source/Integrated.v
+L0 2
+R2
+r1
+31
+R3
+n@integrated
+R4
+!i10b 1
+!s100 eoz1R7;AE;fT;=ZhJDaRH3
+!s85 0
+!s108 1402151147.609000
+!s107 D:/FilterVerilog/Chapter_6/E6_8/MultCIC/source/Integrated.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_6/E6_8/MultCIC/source|D:/FilterVerilog/Chapter_6/E6_8/MultCIC/source/Integrated.v|
+!s101 -O0
+vMultCIC
+I^I=[h73I28oJ2]>4j:J<b1
+VcnnK;W0B`14DjczY6_78T3
+R1
+Z5 w1401719923
+8D:/FilterVerilog/Chapter_6/E6_8/MultCIC/source/MultCIC.v
+FD:/FilterVerilog/Chapter_6/E6_8/MultCIC/source/MultCIC.v
+L0 2
+R2
+r1
+31
+R3
+R4
+n@mult@c@i@c
+!i10b 1
+!s100 _HD>P716ooBRE6LWKX?P]3
+!s85 0
+!s108 1402151148.296000
+!s107 D:/FilterVerilog/Chapter_6/E6_8/MultCIC/source/MultCIC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_6/E6_8/MultCIC/source|D:/FilterVerilog/Chapter_6/E6_8/MultCIC/source/MultCIC.v|
+!s101 -O0
+vMultCIC_vlg_tst
+!i10b 1
+!s100 zS:b;aV8iX4MDOzBU]Lle1
+ImlAnOzO5_Wegb58YNK3Qe0
+VXD`XniKHcfjg7WeUdjNcn1
+R1
+R5
+8D:/FilterVerilog/Chapter_6/E6_8/MultCIC/simulation/modelsim/MultCIC.vt
+FD:/FilterVerilog/Chapter_6/E6_8/MultCIC/simulation/modelsim/MultCIC.vt
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1402151148.468000
+!s107 D:/FilterVerilog/Chapter_6/E6_8/MultCIC/simulation/modelsim/MultCIC.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_6/E6_8/MultCIC/simulation/modelsim|D:/FilterVerilog/Chapter_6/E6_8/MultCIC/simulation/modelsim/MultCIC.vt|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_6/E6_8/MultCIC/simulation/modelsim -O0
+n@mult@c@i@c_vlg_tst

@@ -1,0 +1,9 @@
+//这是Equalizer.v文件的程序清单
+module Equalizer (
+	rst,clk,Xin,
+	Yout);
+	
+	input		rst;   //复位信号，高电平有效
+	input		clk;   //FPGA系统时钟，频率为16kHz
+	input	 signed [11:0]	Xin;  //数据输入频率为2khZ
+	output signed [28:0]	Yout; //滤波后的输出数据

@@ -1,0 +1,93 @@
+//这是fftfilter.v文件的程序清单
+module fftfilter (
+	rst,clk,din,addr,
+	xk_re,xk_im);
+	
+	input		rst;   //复位信号，高电平有效
+	input		clk;   //FPGA系统时钟，频率为数据速率的16倍：64MHz
+	input	 signed [15:0]	din;    //输入数据：64MHz
+	input	 [11:0]	addr;         //输入数据序号
+	output signed [15:0]	xk_re;   //fft变换后的实部信号
+	output signed [15:0]	xk_im;   //fft变换后的虚部信号
+   
+	wire reset_n,inverse,sink_valid,sink_ready;
+	reg source_ready,sink_sop,sink_eop;
+   wire [15:0] sink_imag;
+   wire [1:0] sink_error,source_error;
+	wire source_sop,source_eop,source_valid;
+	wire [5:0] source_exp;
+	wire signed [15:0] xkre,xkim;
+
+   assign reset_n = !rst;
+	assign sink_error = 2'd0;
+	assign sink_valid = 1'b1;
+	assign inverse = 1'b0; //FFT正变换
+	assign sink_imag = 16'd0;
+	
+	//对64MHz主时钟进行16分频处理，用于输入数据加窗等运算
+	always @(posedge clk or posedge rst)
+		if (rst)
+		   begin
+				sink_eop <= 0;
+				sink_sop <= 0;
+				source_ready <= 0;
+			end
+		else
+		   begin
+				if ((addr==4095) || (addr==2047))
+				   sink_sop <= 1'b1;
+				else
+				   sink_sop <= 1'b0;
+				if ((addr==255) || (addr==2303))
+				   sink_eop <= 1'b1;
+				else
+				   sink_eop <= 1'b0;	
+	         if ((addr==4095) || (addr <=255) || (addr>=2303) || (addr <=2047))
+	            source_ready <= 1'b1;
+	         else
+	            source_ready <= 1'b0;
+			end
+	
+   fft256  u0(
+		.clk (clk),
+		.reset_n (reset_n),
+		.inverse (inverse),
+		.sink_valid (sink_valid),
+		.sink_sop (sink_sop),
+		.sink_eop (sink_eop),
+		.sink_real (din),
+		.sink_imag (sink_imag),
+		.sink_error (sink_error),
+		.source_ready (source_ready),
+		.sink_ready (sink_ready),
+		.source_error (source_error),
+		.source_sop (source_sop),
+		.source_eop (source_eop),
+		.source_valid (source_valid),
+		.source_exp (source_exp),
+		.source_real (xkre),
+		.source_imag (xkim));
+
+	assign xk_re = xkre;
+	assign xk_im = xkim;
+
+endmodule
+	
+//	input		clk;
+//	input		reset_n;
+//	input		inverse;
+//	input		sink_valid;
+//	input		sink_sop;
+//	input		sink_eop;
+//	input	[15:0]	sink_real;
+//	input	[15:0]	sink_imag;
+//	input	[1:0]	sink_error;
+//	input		source_ready;
+//	output		sink_ready;
+//	output	[1:0]	source_error;
+//	output		source_sop;
+//	output		source_eop;
+//	output		source_valid;
+//	output	[5:0]	source_exp;
+//	output	[15:0]	source_real;
+//	output	[15:0]	source_imag;

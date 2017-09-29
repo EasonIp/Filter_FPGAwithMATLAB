@@ -1,0 +1,606 @@
+Analysis & Synthesis report for CICIP
+Tue Jun 03 23:28:16 2014
+Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_source_cic_121:aii_source|source_state
+ 11. State Machine - |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|sink_out_state
+ 12. State Machine - |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|sink_state
+ 13. Registers Protected by Synthesis
+ 14. Registers Removed During Synthesis
+ 15. General Register Statistics
+ 16. Inverted Register Statistics
+ 17. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                   ;
++------------------------------------+-------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Jun 03 23:28:16 2014     ;
+; Quartus II 32-bit Version          ; 12.1 Build 177 11/07/2012 SJ Full Version ;
+; Revision Name                      ; CICIP                                     ;
+; Top-level Entity Name              ; CICIP                                     ;
+; Family                             ; Cyclone IV E                              ;
+; Total logic elements               ; 594                                       ;
+;     Total combinational functions  ; 439                                       ;
+;     Dedicated logic registers      ; 450                                       ;
+; Total registers                    ; 450                                       ;
+; Total pins                         ; 38                                        ;
+; Total virtual pins                 ; 0                                         ;
+; Total memory bits                  ; 80                                        ;
+; Embedded Multiplier 9-bit elements ; 0                                         ;
+; Total PLLs                         ; 0                                         ;
++------------------------------------+-------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE15F17C8       ;                    ;
+; Top-level entity name                                                      ; CICIP              ; CICIP              ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                         ;
++---------------------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                              ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                        ; Library ;
++---------------------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; CicFilter.v                                                   ; yes             ; User Wizard-Generated File   ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/CicFilter.v                                                   ;         ;
+; source/CICIP.v                                                ; yes             ; User Verilog HDL File        ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/source/CICIP.v                                                ;         ;
+; CicFilter_cic.vhd                                             ; yes             ; Encrypted User VHDL File     ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/CicFilter_cic.vhd                                             ;         ;
+; cic-library/auk_dspip_cic_lib_pkg_cic_121.vhd                 ; yes             ; Encrypted User VHDL File     ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/cic-library/auk_dspip_cic_lib_pkg_cic_121.vhd                 ;         ;
+; cic-library/auk_dspip_differentiator_cic_121.vhd              ; yes             ; Encrypted User VHDL File     ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/cic-library/auk_dspip_differentiator_cic_121.vhd              ;         ;
+; cic-library/auk_dspip_downsample_cic_121.vhd                  ; yes             ; Encrypted User VHDL File     ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/cic-library/auk_dspip_downsample_cic_121.vhd                  ;         ;
+; cic-library/auk_dspip_integrator_cic_121.vhd                  ; yes             ; Encrypted User VHDL File     ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/cic-library/auk_dspip_integrator_cic_121.vhd                  ;         ;
+; cic-library/auk_dspip_math_pkg_cic_121.vhd                    ; yes             ; Encrypted User VHDL File     ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/cic-library/auk_dspip_math_pkg_cic_121.vhd                    ;         ;
+; cic-library/auk_dspip_lib_pkg_cic_121.vhd                     ; yes             ; Encrypted User VHDL File     ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/cic-library/auk_dspip_lib_pkg_cic_121.vhd                     ;         ;
+; cic-library/auk_dspip_delay_cic_121.vhd                       ; yes             ; Encrypted User VHDL File     ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/cic-library/auk_dspip_delay_cic_121.vhd                       ;         ;
+; cic-library/auk_dspip_avalon_streaming_sink_cic_121.vhd       ; yes             ; Encrypted User VHDL File     ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/cic-library/auk_dspip_avalon_streaming_sink_cic_121.vhd       ;         ;
+; cic-library/auk_dspip_avalon_streaming_source_cic_121.vhd     ; yes             ; Encrypted User VHDL File     ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/cic-library/auk_dspip_avalon_streaming_source_cic_121.vhd     ;         ;
+; cic-library/auk_dspip_avalon_streaming_controller_cic_121.vhd ; yes             ; Encrypted User VHDL File     ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/cic-library/auk_dspip_avalon_streaming_controller_cic_121.vhd ;         ;
+; scfifo.tdf                                                    ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/scfifo.tdf                                           ;         ;
+; a_regfifo.inc                                                 ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/a_regfifo.inc                                        ;         ;
+; a_dpfifo.inc                                                  ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/a_dpfifo.inc                                         ;         ;
+; a_i2fifo.inc                                                  ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/a_i2fifo.inc                                         ;         ;
+; a_fffifo.inc                                                  ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/a_fffifo.inc                                         ;         ;
+; a_f2fifo.inc                                                  ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/a_f2fifo.inc                                         ;         ;
+; aglobal121.inc                                                ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/aglobal121.inc                                       ;         ;
+; db/scfifo_ahh1.tdf                                            ; yes             ; Auto-Generated Megafunction  ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/db/scfifo_ahh1.tdf                                            ;         ;
+; db/a_dpfifo_3s81.tdf                                          ; yes             ; Auto-Generated Megafunction  ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/db/a_dpfifo_3s81.tdf                                          ;         ;
+; db/altsyncram_ksf1.tdf                                        ; yes             ; Auto-Generated Megafunction  ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/db/altsyncram_ksf1.tdf                                        ;         ;
+; db/cmpr_gs8.tdf                                               ; yes             ; Auto-Generated Megafunction  ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/db/cmpr_gs8.tdf                                               ;         ;
+; db/cntr_tnb.tdf                                               ; yes             ; Auto-Generated Megafunction  ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/db/cntr_tnb.tdf                                               ;         ;
+; db/cntr_ao7.tdf                                               ; yes             ; Auto-Generated Megafunction  ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/db/cntr_ao7.tdf                                               ;         ;
+; db/cntr_unb.tdf                                               ; yes             ; Auto-Generated Megafunction  ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/db/cntr_unb.tdf                                               ;         ;
+; lpm_add_sub.tdf                                               ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/lpm_add_sub.tdf                                      ;         ;
+; addcore.inc                                                   ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/addcore.inc                                          ;         ;
+; look_add.inc                                                  ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/look_add.inc                                         ;         ;
+; bypassff.inc                                                  ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/bypassff.inc                                         ;         ;
+; altshift.inc                                                  ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/altshift.inc                                         ;         ;
+; alt_stratix_add_sub.inc                                       ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                              ;         ;
+; db/add_sub_mvi.tdf                                            ; yes             ; Auto-Generated Megafunction  ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/db/add_sub_mvi.tdf                                            ;         ;
+; a_regfifo.tdf                                                 ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/a_regfifo.tdf                                        ;         ;
+; db/add_sub_n0j.tdf                                            ; yes             ; Auto-Generated Megafunction  ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/db/add_sub_n0j.tdf                                            ;         ;
+; pzdyqx.vhd                                                    ; yes             ; Encrypted Megafunction       ; c:/altera/12.1/quartus/libraries/megafunctions/pzdyqx.vhd                                           ;         ;
+; sld_hub.vhd                                                   ; yes             ; Encrypted Megafunction       ; c:/altera/12.1/quartus/libraries/megafunctions/sld_hub.vhd                                          ;         ;
+; sld_jtag_hub.vhd                                              ; yes             ; Encrypted Megafunction       ; c:/altera/12.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                     ;         ;
+; sld_rom_sr.vhd                                                ; yes             ; Encrypted Megafunction       ; c:/altera/12.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                       ;         ;
++---------------------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 594   ;
+;                                             ;       ;
+; Total combinational functions               ; 439   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 145   ;
+;     -- 3 input functions                    ; 191   ;
+;     -- <=2 input functions                  ; 103   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 326   ;
+;     -- arithmetic mode                      ; 113   ;
+;                                             ;       ;
+; Total registers                             ; 450   ;
+;     -- Dedicated logic registers            ; 450   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 38    ;
+; Total memory bits                           ; 80    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out                             ; 306   ;
+; Total fan-out                               ; 3110  ;
+; Average fan-out                             ; 3.16  ;
++---------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                   ;
++------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                                                         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                   ; Library Name ;
++------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |CICIP                                                                             ; 439 (1)           ; 450 (0)      ; 80          ; 0            ; 0       ; 0         ; 38   ; 0            ; |CICIP                                                                                                                                                                                                                                ;              ;
+;    |CicFilter:CicFilter_cic_inst|                                                  ; 191 (0)           ; 296 (0)      ; 80          ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst                                                                                                                                                                                                   ;              ;
+;       |CicFilter_cic:CicFilter_cic_inst|                                           ; 191 (1)           ; 296 (0)      ; 80          ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst                                                                                                                                                                  ;              ;
+;          |CicFilter_cic_core:cic_core|                                             ; 119 (11)          ; 201 (10)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core                                                                                                                                      ;              ;
+;             |auk_dspip_differentiator_cic_121:auk_dspip_differentiator_0|          ; 17 (17)           ; 34 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_differentiator_cic_121:auk_dspip_differentiator_0                                                                          ;              ;
+;                |auk_dspip_delay_cic_121:\glogic:u0|                                ; 0 (0)             ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_differentiator_cic_121:auk_dspip_differentiator_0|auk_dspip_delay_cic_121:\glogic:u0                                       ;              ;
+;             |auk_dspip_differentiator_cic_121:auk_dspip_differentiator_1|          ; 17 (17)           ; 34 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_differentiator_cic_121:auk_dspip_differentiator_1                                                                          ;              ;
+;                |auk_dspip_delay_cic_121:\glogic:u0|                                ; 0 (0)             ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_differentiator_cic_121:auk_dspip_differentiator_1|auk_dspip_delay_cic_121:\glogic:u0                                       ;              ;
+;             |auk_dspip_differentiator_cic_121:auk_dspip_differentiator_2|          ; 17 (17)           ; 34 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_differentiator_cic_121:auk_dspip_differentiator_2                                                                          ;              ;
+;                |auk_dspip_delay_cic_121:\glogic:u0|                                ; 0 (0)             ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_differentiator_cic_121:auk_dspip_differentiator_2|auk_dspip_delay_cic_121:\glogic:u0                                       ;              ;
+;             |auk_dspip_downsample_cic_121:auk_dspip_downsample_inst|               ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_downsample_cic_121:auk_dspip_downsample_inst                                                                               ;              ;
+;             |auk_dspip_integrator_cic_121:auk_dspip_integrator_0|                  ; 17 (0)            ; 17 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_integrator_cic_121:auk_dspip_integrator_0                                                                                  ;              ;
+;                |auk_dspip_delay_cic_121:\glogic:integrator_pipeline_0_generate:u1| ; 17 (17)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_integrator_cic_121:auk_dspip_integrator_0|auk_dspip_delay_cic_121:\glogic:integrator_pipeline_0_generate:u1                ;              ;
+;             |auk_dspip_integrator_cic_121:auk_dspip_integrator_1|                  ; 17 (0)            ; 17 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_integrator_cic_121:auk_dspip_integrator_1                                                                                  ;              ;
+;                |auk_dspip_delay_cic_121:\glogic:integrator_pipeline_0_generate:u1| ; 17 (17)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_integrator_cic_121:auk_dspip_integrator_1|auk_dspip_delay_cic_121:\glogic:integrator_pipeline_0_generate:u1                ;              ;
+;             |auk_dspip_integrator_cic_121:auk_dspip_integrator_2|                  ; 17 (0)            ; 17 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_integrator_cic_121:auk_dspip_integrator_2                                                                                  ;              ;
+;                |auk_dspip_delay_cic_121:\glogic:integrator_pipeline_0_generate:u1| ; 17 (17)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_integrator_cic_121:auk_dspip_integrator_2|auk_dspip_delay_cic_121:\glogic:integrator_pipeline_0_generate:u1                ;              ;
+;             |scfifo:in_fifo|                                                       ; 3 (0)             ; 35 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|scfifo:in_fifo                                                                                                                       ;              ;
+;                |a_regfifo:subfifo|                                                 ; 3 (3)             ; 35 (35)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|scfifo:in_fifo|a_regfifo:subfifo                                                                                                     ;              ;
+;          |auk_dspip_avalon_streaming_controller_cic_121:aii_controller|            ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_controller_cic_121:aii_controller                                                                                                     ;              ;
+;          |auk_dspip_avalon_streaming_sink_cic_121:aii_sink|                        ; 31 (10)           ; 33 (17)      ; 80          ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink                                                                                                                 ;              ;
+;             |scfifo:\normal_fifo:fifo_eab_on:in_fifo|                              ; 21 (0)            ; 16 (0)       ; 80          ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|scfifo:\normal_fifo:fifo_eab_on:in_fifo                                                                         ;              ;
+;                |scfifo_ahh1:auto_generated|                                        ; 21 (2)            ; 16 (1)       ; 80          ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|scfifo:\normal_fifo:fifo_eab_on:in_fifo|scfifo_ahh1:auto_generated                                              ;              ;
+;                   |a_dpfifo_3s81:dpfifo|                                           ; 19 (11)           ; 15 (7)       ; 80          ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|scfifo:\normal_fifo:fifo_eab_on:in_fifo|scfifo_ahh1:auto_generated|a_dpfifo_3s81:dpfifo                         ;              ;
+;                      |altsyncram_ksf1:FIFOram|                                     ; 0 (0)             ; 0 (0)        ; 80          ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|scfifo:\normal_fifo:fifo_eab_on:in_fifo|scfifo_ahh1:auto_generated|a_dpfifo_3s81:dpfifo|altsyncram_ksf1:FIFOram ;              ;
+;                      |cntr_ao7:usedw_counter|                                      ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|scfifo:\normal_fifo:fifo_eab_on:in_fifo|scfifo_ahh1:auto_generated|a_dpfifo_3s81:dpfifo|cntr_ao7:usedw_counter  ;              ;
+;                      |cntr_tnb:rd_ptr_msb|                                         ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|scfifo:\normal_fifo:fifo_eab_on:in_fifo|scfifo_ahh1:auto_generated|a_dpfifo_3s81:dpfifo|cntr_tnb:rd_ptr_msb     ;              ;
+;                      |cntr_unb:wr_ptr|                                             ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|scfifo:\normal_fifo:fifo_eab_on:in_fifo|scfifo_ahh1:auto_generated|a_dpfifo_3s81:dpfifo|cntr_unb:wr_ptr         ;              ;
+;          |auk_dspip_avalon_streaming_source_cic_121:aii_source|                    ; 36 (36)           ; 58 (58)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_source_cic_121:aii_source                                                                                                             ;              ;
+;    |pzdyqx:nabboc|                                                                 ; 121 (0)           ; 72 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|pzdyqx:nabboc                                                                                                                                                                                                                  ;              ;
+;       |pzdyqx_impl:pzdyqx_impl_inst|                                               ; 121 (12)          ; 72 (9)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst                                                                                                                                                                                     ;              ;
+;          |GHVD5181:\cycloneiii_BITP7563_gen_0:cycloneiii_BITP7563_gen_1|           ; 53 (23)           ; 28 (8)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|GHVD5181:\cycloneiii_BITP7563_gen_0:cycloneiii_BITP7563_gen_1                                                                                                                       ;              ;
+;             |LQYT7093:MBPH5020|                                                    ; 30 (30)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|GHVD5181:\cycloneiii_BITP7563_gen_0:cycloneiii_BITP7563_gen_1|LQYT7093:MBPH5020                                                                                                     ;              ;
+;          |KIFI3548:TPOO7242|                                                       ; 13 (13)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|KIFI3548:TPOO7242                                                                                                                                                                   ;              ;
+;          |LQYT7093:LRYQ7721|                                                       ; 22 (22)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|LQYT7093:LRYQ7721                                                                                                                                                                   ;              ;
+;          |PUDL0439:ESUL0435|                                                       ; 21 (21)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|PUDL0439:ESUL0435                                                                                                                                                                   ;              ;
+;    |sld_hub:auto_hub|                                                              ; 126 (1)           ; 82 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|sld_hub:auto_hub                                                                                                                                                                                                               ;              ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                               ; 125 (89)          ; 82 (54)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                  ;              ;
+;          |sld_rom_sr:hub_info_reg|                                                 ; 19 (19)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                                                                                                          ;              ;
+;          |sld_shadow_jsm:shadow_jsm|                                               ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CICIP|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                                                                                                        ;              ;
++------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                                                                              ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                                                                                                                                                      ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|scfifo:\normal_fifo:fifo_eab_on:in_fifo|scfifo_ahh1:auto_generated|a_dpfifo_3s81:dpfifo|altsyncram_ksf1:FIFOram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 8            ; 12           ; 8            ; 12           ; 96   ; None ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                                                                                                                                  ;
++--------+-----------------+---------+--------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name    ; Version ; Release Date ; License Type  ; Entity Instance                                                                                                                                              ; IP Include File                                                                                     ;
++--------+-----------------+---------+--------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+; Altera ; CIC (6AF7_00BB) ; N/A     ; Nov 2012     ; OpenCore Plus ; |CICIP|CicFilter:CicFilter_cic_inst                                                                                                                          ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/CicFilter_cic.vhd                                             ;
+; Altera ; CIC             ; N/A     ; Nov 2012     ; OpenCore Plus ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_controller_cic_121:aii_controller                            ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/cic-library/auk_dspip_avalon_streaming_controller_cic_121.vhd ;
+; Altera ; CIC             ; N/A     ; Nov 2012     ; OpenCore Plus ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink                                        ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/cic-library/auk_dspip_avalon_streaming_sink_cic_121.vhd       ;
+; Altera ; CIC             ; N/A     ; Nov 2012     ; OpenCore Plus ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_source_cic_121:aii_source                                    ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/cic-library/auk_dspip_avalon_streaming_source_cic_121.vhd     ;
+; Altera ; CIC             ; N/A     ; Nov 2012     ; OpenCore Plus ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_differentiator_cic_121:auk_dspip_differentiator_0 ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/cic-library/auk_dspip_differentiator_cic_121.vhd              ;
+; Altera ; CIC             ; N/A     ; Nov 2012     ; OpenCore Plus ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_differentiator_cic_121:auk_dspip_differentiator_0 ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/cic-library/auk_dspip_differentiator_cic_121.vhd              ;
+; Altera ; CIC             ; N/A     ; Nov 2012     ; OpenCore Plus ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_differentiator_cic_121:auk_dspip_differentiator_0 ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/cic-library/auk_dspip_differentiator_cic_121.vhd              ;
+; Altera ; CIC             ; N/A     ; Nov 2012     ; OpenCore Plus ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_downsample_cic_121:auk_dspip_downsample_inst      ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/cic-library/auk_dspip_downsample_cic_121.vhd                  ;
+; Altera ; CIC             ; N/A     ; Nov 2012     ; OpenCore Plus ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_integrator_cic_121:auk_dspip_integrator_0         ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/cic-library/auk_dspip_integrator_cic_121.vhd                  ;
+; Altera ; CIC             ; N/A     ; Nov 2012     ; OpenCore Plus ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_integrator_cic_121:auk_dspip_integrator_0         ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/cic-library/auk_dspip_integrator_cic_121.vhd                  ;
+; Altera ; CIC             ; N/A     ; Nov 2012     ; OpenCore Plus ; |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_integrator_cic_121:auk_dspip_integrator_0         ; D:/FilterVerilog/Chapter_6/E6_9/CICIP/cic-library/auk_dspip_integrator_cic_121.vhd                  ;
++--------+-----------------+---------+--------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+OpenCore Plus Hardware Evaluation feature is turned on for all cores in the design.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_source_cic_121:aii_source|source_state ;
++---------------------+-------------------+---------------------+-------------------+------------------+-------------------------------------------------+
+; Name                ; source_state.end1 ; source_state.st_err ; source_state.run1 ; source_state.sop ; source_state.start                              ;
++---------------------+-------------------+---------------------+-------------------+------------------+-------------------------------------------------+
+; source_state.start  ; 0                 ; 0                   ; 0                 ; 0                ; 0                                               ;
+; source_state.sop    ; 0                 ; 0                   ; 0                 ; 1                ; 1                                               ;
+; source_state.run1   ; 0                 ; 0                   ; 1                 ; 0                ; 1                                               ;
+; source_state.st_err ; 0                 ; 1                   ; 0                 ; 0                ; 1                                               ;
+; source_state.end1   ; 1                 ; 0                   ; 0                 ; 0                ; 1                                               ;
++---------------------+-------------------+---------------------+-------------------+------------------+-------------------------------------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|sink_out_state ;
++------------------------------------+--------------------------------+------------------------------------+-------------------------------------------+
+; Name                               ; sink_out_state.empty_and_ready ; sink_out_state.empty_and_not_ready ; sink_out_state.normal                     ;
++------------------------------------+--------------------------------+------------------------------------+-------------------------------------------+
+; sink_out_state.normal              ; 0                              ; 0                                  ; 0                                         ;
+; sink_out_state.empty_and_not_ready ; 0                              ; 1                                  ; 1                                         ;
+; sink_out_state.empty_and_ready     ; 1                              ; 0                                  ; 1                                         ;
++------------------------------------+--------------------------------+------------------------------------+-------------------------------------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|sink_state ;
++-------------------+-----------------+-------------------+-----------------+------------------+---------------------------------------------------+
+; Name              ; sink_state.end1 ; sink_state.st_err ; sink_state.run1 ; sink_state.stall ; sink_state.start                                  ;
++-------------------+-----------------+-------------------+-----------------+------------------+---------------------------------------------------+
+; sink_state.start  ; 0               ; 0                 ; 0               ; 0                ; 0                                                 ;
+; sink_state.stall  ; 0               ; 0                 ; 0               ; 1                ; 1                                                 ;
+; sink_state.run1   ; 0               ; 0                 ; 1               ; 0                ; 1                                                 ;
+; sink_state.st_err ; 0               ; 1                 ; 0               ; 0                ; 1                                                 ;
+; sink_state.end1   ; 1               ; 0                 ; 0               ; 0                ; 1                                                 ;
++-------------------+-----------------+-------------------+-----------------+------------------+---------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Protected by Synthesis                                                                                                                                                                                                                     ;
++--------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; Register Name                                                                                                                        ; Protected by Synthesis Attribute or Preserve Register Assignment ; Not to be Touched by Netlist Optimizations ;
++--------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_controller_cic_121:aii_controller|stall_reg ; yes                                                              ; yes                                        ;
++--------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                                                                                                                                                       ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Register name                                                                                                                                               ; Reason for Removal                                                                                                                                                         ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|at_sink_sop_int                              ; Lost fanout                                                                                                                                                                ;
+; CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|at_sink_eop_int                              ; Lost fanout                                                                                                                                                                ;
+; CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_source_cic_121:aii_source|at_source_error[1]                       ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
+; CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_downsample_cic_121:auk_dspip_downsample_inst|counter_ch ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
+; CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|rate_cnt[2]                                                       ; Merged with CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_downsample_cic_121:auk_dspip_downsample_inst|counter_fs[2] ;
+; CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|rate_cnt[1]                                                       ; Merged with CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_downsample_cic_121:auk_dspip_downsample_inst|counter_fs[1] ;
+; CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|rate_cnt[0]                                                       ; Merged with CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_downsample_cic_121:auk_dspip_downsample_inst|counter_fs[0] ;
+; CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_source_cic_121:aii_source|source_state.start                       ; Lost fanout                                                                                                                                                                ;
+; CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_source_cic_121:aii_source|source_state.sop                         ; Lost fanout                                                                                                                                                                ;
+; CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_source_cic_121:aii_source|source_state.run1                        ; Lost fanout                                                                                                                                                                ;
+; CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_source_cic_121:aii_source|source_state.st_err                      ; Lost fanout                                                                                                                                                                ;
+; CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_source_cic_121:aii_source|source_state.end1                        ; Lost fanout                                                                                                                                                                ;
+; CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|sink_state.start                             ; Lost fanout                                                                                                                                                                ;
+; CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|sink_state.stall                             ; Lost fanout                                                                                                                                                                ;
+; CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|sink_state.st_err                            ; Lost fanout                                                                                                                                                                ;
+; CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|sink_state.end1                              ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
+; CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|sink_out_state.empty_and_not_ready           ; Lost fanout                                                                                                                                                                ;
+; Total Number of Removed Registers = 17                                                                                                                      ;                                                                                                                                                                            ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 450   ;
+; Number of registers using Synchronous Clear  ; 30    ;
+; Number of registers using Synchronous Load   ; 14    ;
+; Number of registers using Asynchronous Clear ; 341   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 345   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                                                                          ;
++---------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                                                                           ; Fan out ;
++---------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_controller_cic_121:aii_controller|stall_reg        ; 10      ;
+; CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_controller_cic_121:aii_controller|sink_stall_reg   ; 3       ;
+; CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_controller_cic_121:aii_controller|source_stall_reg ; 3       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|tdo                                                                           ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[2]                                                                ; 2       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[1]                                                                ; 3       ;
+; Total number of inverted registers = 6                                                                                                      ;         ;
++---------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------+
+; 20:1               ; 4 bits    ; 52 LEs        ; 44 LEs               ; 8 LEs                  ; Yes        ; |CICIP|pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|PUDL0439:ESUL0435|YROJ4113[2]                              ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CICIP|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[0]                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |CICIP|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]                           ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CICIP|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                       ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CICIP|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0] ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |CICIP|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]                             ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |CICIP|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|shadow_irf_reg[1][3]                    ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 64 LEs               ; 24 LEs                 ; Yes        ; |CICIP|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]                      ;
+; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |CICIP|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[0]      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------+
+; Elapsed Time Per Partition      ;
++------------------+--------------+
+; Partition Name   ; Elapsed Time ;
++------------------+--------------+
+; Top              ; 00:00:01     ;
+; sld_hub:auto_hub ; 00:00:01     ;
+; pzdyqx:nabboc    ; 00:00:01     ;
++------------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 12.1 Build 177 11/07/2012 SJ Full Version
+    Info: Processing started: Tue Jun 03 23:28:06 2014
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CICIP -c CICIP
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file cicfilter.v
+    Info (12023): Found entity 1: CicFilter
+Info (12021): Found 1 design units, including 1 entities, in source file source/cicip.v
+    Info (12023): Found entity 1: CICIP
+Info (12021): Found 4 design units, including 2 entities, in source file cicfilter_cic.vhd
+    Info (12022): Found design unit 1: CicFilter_cic_core-arch_of_CicFilter_cic_core
+    Info (12022): Found design unit 2: CicFilter_cic-struct
+    Info (12023): Found entity 1: CicFilter_cic_core
+    Info (12023): Found entity 2: CicFilter_cic
+Info (12021): Found 1 design units, including 0 entities, in source file cic-library/auk_dspip_cic_lib_pkg_cic_121.vhd
+    Info (12022): Found design unit 1: auk_dspip_cic_lib_pkg_cic_121
+Info (12021): Found 2 design units, including 1 entities, in source file cic-library/auk_dspip_differentiator_cic_121.vhd
+    Info (12022): Found design unit 1: auk_dspip_differentiator_cic_121-SYN
+    Info (12023): Found entity 1: auk_dspip_differentiator_cic_121
+Info (12021): Found 2 design units, including 1 entities, in source file cic-library/auk_dspip_downsample_cic_121.vhd
+    Info (12022): Found design unit 1: auk_dspip_downsample_cic_121-SYN
+    Info (12023): Found entity 1: auk_dspip_downsample_cic_121
+Info (12021): Found 2 design units, including 1 entities, in source file cic-library/auk_dspip_variable_downsample_cic_121.vhd
+    Info (12022): Found design unit 1: auk_dspip_variable_downsample_cic_121-SYN
+    Info (12023): Found entity 1: auk_dspip_variable_downsample_cic_121
+Info (12021): Found 2 design units, including 1 entities, in source file cic-library/auk_dspip_integrator_cic_121.vhd
+    Info (12022): Found design unit 1: auk_dspip_integrator_cic_121-SYN
+    Info (12023): Found entity 1: auk_dspip_integrator_cic_121
+Info (12021): Found 2 design units, including 1 entities, in source file cic-library/auk_dspip_upsample_cic_121.vhd
+    Info (12022): Found design unit 1: auk_dspip_upsample_cic_121-SYN
+    Info (12023): Found entity 1: auk_dspip_upsample_cic_121
+Info (12021): Found 2 design units, including 0 entities, in source file cic-library/auk_dspip_math_pkg_cic_121.vhd
+    Info (12022): Found design unit 1: auk_dspip_math_pkg_cic_121
+    Info (12022): Found design unit 2: auk_dspip_math_pkg_cic_121-body
+Info (12021): Found 1 design units, including 0 entities, in source file cic-library/auk_dspip_lib_pkg_cic_121.vhd
+    Info (12022): Found design unit 1: auk_dspip_lib_pkg_cic_121
+Info (12021): Found 2 design units, including 1 entities, in source file cic-library/auk_dspip_delay_cic_121.vhd
+    Info (12022): Found design unit 1: auk_dspip_delay_cic_121-rtl
+    Info (12023): Found entity 1: auk_dspip_delay_cic_121
+Info (12021): Found 2 design units, including 1 entities, in source file cic-library/auk_dspip_fastadd_cic_121.vhd
+    Info (12022): Found design unit 1: auk_dspip_fastadd_cic_121-beh
+    Info (12023): Found entity 1: auk_dspip_fastadd_cic_121
+Info (12021): Found 2 design units, including 1 entities, in source file cic-library/auk_dspip_fastaddsub_cic_121.vhd
+    Info (12022): Found design unit 1: auk_dspip_fastaddsub_cic_121-beh
+    Info (12023): Found entity 1: auk_dspip_fastaddsub_cic_121
+Info (12021): Found 2 design units, including 1 entities, in source file cic-library/auk_dspip_avalon_streaming_sink_cic_121.vhd
+    Info (12022): Found design unit 1: auk_dspip_avalon_streaming_sink_cic_121-rtl
+    Info (12023): Found entity 1: auk_dspip_avalon_streaming_sink_cic_121
+Info (12021): Found 2 design units, including 1 entities, in source file cic-library/auk_dspip_avalon_streaming_source_cic_121.vhd
+    Info (12022): Found design unit 1: auk_dspip_avalon_streaming_source_cic_121-rtl
+    Info (12023): Found entity 1: auk_dspip_avalon_streaming_source_cic_121
+Info (12021): Found 2 design units, including 1 entities, in source file cic-library/auk_dspip_avalon_streaming_controller_cic_121.vhd
+    Info (12022): Found design unit 1: auk_dspip_avalon_streaming_controller_cic_121-struct
+    Info (12023): Found entity 1: auk_dspip_avalon_streaming_controller_cic_121
+Info (12021): Found 2 design units, including 1 entities, in source file cic-library/auk_dspip_roundsat_cic_121.vhd
+    Info (12022): Found design unit 1: auk_dspip_roundsat_cic_121-beh
+    Info (12023): Found entity 1: auk_dspip_roundsat_cic_121
+Info (12127): Elaborating entity "CICIP" for the top level hierarchy
+Info (12128): Elaborating entity "CicFilter" for hierarchy "CicFilter:CicFilter_cic_inst"
+Info (12128): Elaborating entity "CicFilter_cic" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst"
+Info (12128): Elaborating entity "auk_dspip_avalon_streaming_sink_cic_121" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink"
+Info (12128): Elaborating entity "scfifo" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|scfifo:\normal_fifo:fifo_eab_on:in_fifo"
+Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_ahh1.tdf
+    Info (12023): Found entity 1: scfifo_ahh1
+Info (12128): Elaborating entity "scfifo_ahh1" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|scfifo:\normal_fifo:fifo_eab_on:in_fifo|scfifo_ahh1:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_3s81.tdf
+    Info (12023): Found entity 1: a_dpfifo_3s81
+Info (12128): Elaborating entity "a_dpfifo_3s81" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|scfifo:\normal_fifo:fifo_eab_on:in_fifo|scfifo_ahh1:auto_generated|a_dpfifo_3s81:dpfifo"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ksf1.tdf
+    Info (12023): Found entity 1: altsyncram_ksf1
+Info (12128): Elaborating entity "altsyncram_ksf1" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|scfifo:\normal_fifo:fifo_eab_on:in_fifo|scfifo_ahh1:auto_generated|a_dpfifo_3s81:dpfifo|altsyncram_ksf1:FIFOram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_gs8.tdf
+    Info (12023): Found entity 1: cmpr_gs8
+Info (12128): Elaborating entity "cmpr_gs8" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|scfifo:\normal_fifo:fifo_eab_on:in_fifo|scfifo_ahh1:auto_generated|a_dpfifo_3s81:dpfifo|cmpr_gs8:almost_full_comparer"
+Info (12128): Elaborating entity "cmpr_gs8" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|scfifo:\normal_fifo:fifo_eab_on:in_fifo|scfifo_ahh1:auto_generated|a_dpfifo_3s81:dpfifo|cmpr_gs8:two_comparison"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_tnb.tdf
+    Info (12023): Found entity 1: cntr_tnb
+Info (12128): Elaborating entity "cntr_tnb" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|scfifo:\normal_fifo:fifo_eab_on:in_fifo|scfifo_ahh1:auto_generated|a_dpfifo_3s81:dpfifo|cntr_tnb:rd_ptr_msb"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_ao7.tdf
+    Info (12023): Found entity 1: cntr_ao7
+Info (12128): Elaborating entity "cntr_ao7" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|scfifo:\normal_fifo:fifo_eab_on:in_fifo|scfifo_ahh1:auto_generated|a_dpfifo_3s81:dpfifo|cntr_ao7:usedw_counter"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_unb.tdf
+    Info (12023): Found entity 1: cntr_unb
+Info (12128): Elaborating entity "cntr_unb" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|scfifo:\normal_fifo:fifo_eab_on:in_fifo|scfifo_ahh1:auto_generated|a_dpfifo_3s81:dpfifo|cntr_unb:wr_ptr"
+Info (12128): Elaborating entity "auk_dspip_avalon_streaming_source_cic_121" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_source_cic_121:aii_source"
+Info (12128): Elaborating entity "auk_dspip_avalon_streaming_controller_cic_121" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_controller_cic_121:aii_controller"
+Info (12128): Elaborating entity "CicFilter_cic_core" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core"
+Info (12128): Elaborating entity "auk_dspip_integrator_cic_121" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_integrator_cic_121:auk_dspip_integrator_0"
+Info (12128): Elaborating entity "LPM_ADD_SUB" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_integrator_cic_121:auk_dspip_integrator_0|LPM_ADD_SUB:\glogic:integrator_pipeline_0_generate:u0"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_mvi.tdf
+    Info (12023): Found entity 1: add_sub_mvi
+Info (12128): Elaborating entity "add_sub_mvi" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_integrator_cic_121:auk_dspip_integrator_0|LPM_ADD_SUB:\glogic:integrator_pipeline_0_generate:u0|add_sub_mvi:auto_generated"
+Info (12128): Elaborating entity "auk_dspip_delay_cic_121" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_integrator_cic_121:auk_dspip_integrator_0|auk_dspip_delay_cic_121:\glogic:integrator_pipeline_0_generate:u1"
+Info (12128): Elaborating entity "scfifo" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|scfifo:in_fifo"
+Info (12128): Elaborating entity "a_regfifo" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|scfifo:in_fifo|a_regfifo:subfifo"
+Info (12128): Elaborating entity "auk_dspip_downsample_cic_121" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_downsample_cic_121:auk_dspip_downsample_inst"
+Info (12128): Elaborating entity "auk_dspip_differentiator_cic_121" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_differentiator_cic_121:auk_dspip_differentiator_0"
+Info (12128): Elaborating entity "LPM_ADD_SUB" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_differentiator_cic_121:auk_dspip_differentiator_0|LPM_ADD_SUB:u0"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_n0j.tdf
+    Info (12023): Found entity 1: add_sub_n0j
+Info (12128): Elaborating entity "add_sub_n0j" for hierarchy "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_differentiator_cic_121:auk_dspip_differentiator_0|LPM_ADD_SUB:u0|add_sub_n0j:auto_generated"
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|scfifo:\normal_fifo:fifo_eab_on:in_fifo|scfifo_ahh1:auto_generated|a_dpfifo_3s81:dpfifo|altsyncram_ksf1:FIFOram|q_b[10]"
+        Warning (14320): Synthesized away node "CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|scfifo:\normal_fifo:fifo_eab_on:in_fifo|scfifo_ahh1:auto_generated|a_dpfifo_3s81:dpfifo|altsyncram_ksf1:FIFOram|q_b[11]"
+Warning (12188): OpenCore Plus Hardware Evaluation feature is turned on for the following cores
+    Warning (12190): "CIC (6AF7_00BB)" will use the OpenCore Plus Hardware Evaluation feature
+Warning (265072): Messages from megafunction that supports OpenCore Plus feature
+    Warning (265073): Messages from megafunction that supports OpenCore Plus feature CIC
+        Warning (265074): CIC MegaCore will be disabled after the timeout is reached
+Warning (265069): Megafunction that supports OpenCore Plus feature will stop functioning in 1 hour after device is programmed
+Info (265071): Evaluation period of megafunction that supports OpenCore Plus feature can be extended indefinitely by using tethered operation
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "out_error[1]" is stuck at GND
+Info (286031): Timing-Driven Synthesis is running on partition "Top"
+Info (17049): 11 registers lost all their fanouts during netlist optimizations.
+Info (286031): Timing-Driven Synthesis is running on partition "pzdyqx:nabboc"
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "sld_hub:auto_hub|receive[0][0]" is stuck at GND
+Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "in_error[1]"
+Info (21057): Implemented 657 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 20 input pins
+    Info (21059): Implemented 22 output pins
+    Info (21061): Implemented 604 logic cells
+    Info (21064): Implemented 10 RAM segments
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 345 megabytes
+    Info: Processing ended: Tue Jun 03 23:28:16 2014
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:10
+
+

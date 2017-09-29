@@ -1,0 +1,77 @@
+# Reading C:/altera/modelsim/modelsim_ase/tcl/vsim/pref.tcl 
+# ERROR: No extended dataflow license exists
+# do IIRDirect_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\modelsim\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\modelsim\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_5/E5_4/IIRDirect/source {D:/FilterVerilog/Chapter_5/E5_4/IIRDirect/source/IIRDirect.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module IIRDirect
+# 
+# Top level modules:
+# 	IIRDirect
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_5/E5_4/IIRDirect/ipcore {D:/FilterVerilog/Chapter_5/E5_4/IIRDirect/ipcore/multc12.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module multc12
+# 
+# Top level modules:
+# 	multc12
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_5/E5_4/IIRDirect/source {D:/FilterVerilog/Chapter_5/E5_4/IIRDirect/source/ZeroParallel.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module ZeroParallel
+# 
+# Top level modules:
+# 	ZeroParallel
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_5/E5_4/IIRDirect/source {D:/FilterVerilog/Chapter_5/E5_4/IIRDirect/source/PoleParallel.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module PoleParallel
+# 
+# Top level modules:
+# 	PoleParallel
+# 
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_5/E5_4/IIRDirect/simulation/modelsim {D:/FilterVerilog/Chapter_5/E5_4/IIRDirect/simulation/modelsim/IIRDirect.vt}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module IIRDirect_vlg_tst
+# 
+# Top level modules:
+# 	IIRDirect_vlg_tst
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  IIRDirect_vlg_tst
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps IIRDirect_vlg_tst 
+# Loading work.IIRDirect_vlg_tst
+# Loading work.IIRDirect
+# Loading work.ZeroParallel
+# Loading work.PoleParallel
+# Loading work.multc12
+# Loading lpm_ver.lpm_mult
+# Loading lpm_ver.LPM_HINT_EVALUATION
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Administrator  Hostname: 20120612-2332  ProcessID: 5780
+# 
+#           Attempting to use alternate WLF file "./wlftx29ci6".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftx29ci6
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 2001 of file "Bin_noise.txt". (Current address [2001], address range [1:2000])    : D:/FilterVerilog/Chapter_5/E5_4/IIRDirect/simulation/modelsim/IIRDirect.vt(76)
+#    Time: 0 ps  Iteration: 0  Instance: /IIRDirect_vlg_tst
+# ** Note: $finish    : D:/FilterVerilog/Chapter_5/E5_4/IIRDirect/simulation/modelsim/IIRDirect.vt(61)
+#    Time: 636 us  Iteration: 0  Instance: /IIRDirect_vlg_tst
+# Break key hit 
+# 1
+# Break in Module IIRDirect_vlg_tst at D:/FilterVerilog/Chapter_5/E5_4/IIRDirect/simulation/modelsim/IIRDirect.vt line 61

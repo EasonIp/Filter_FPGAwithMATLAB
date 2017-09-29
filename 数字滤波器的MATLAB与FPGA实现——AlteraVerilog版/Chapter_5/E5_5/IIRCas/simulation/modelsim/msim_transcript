@@ -1,0 +1,75 @@
+# Reading C:/altera/modelsim/modelsim_ase/tcl/vsim/pref.tcl 
+# ERROR: No extended dataflow license exists
+# do IIRCas_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\modelsim\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\modelsim\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_5/E5_5/IIRCas/source {D:/FilterVerilog/Chapter_5/E5_5/IIRCas/source/FourthTap.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module FourthTap
+# 
+# Top level modules:
+# 	FourthTap
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_5/E5_5/IIRCas/source {D:/FilterVerilog/Chapter_5/E5_5/IIRCas/source/ThirdTap.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module ThirdTap
+# 
+# Top level modules:
+# 	ThirdTap
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_5/E5_5/IIRCas/source {D:/FilterVerilog/Chapter_5/E5_5/IIRCas/source/SecondTap.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module SecondTap
+# 
+# Top level modules:
+# 	SecondTap
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_5/E5_5/IIRCas/source {D:/FilterVerilog/Chapter_5/E5_5/IIRCas/source/FirstTap.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module FirstTap
+# 
+# Top level modules:
+# 	FirstTap
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_5/E5_5/IIRCas/source {D:/FilterVerilog/Chapter_5/E5_5/IIRCas/source/IIRCas.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module IIRCas
+# 
+# Top level modules:
+# 	IIRCas
+# 
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_5/E5_5/IIRCas/simulation/modelsim {D:/FilterVerilog/Chapter_5/E5_5/IIRCas/simulation/modelsim/IIRCas.vt}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module IIRCas_vlg_tst
+# 
+# Top level modules:
+# 	IIRCas_vlg_tst
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  IIRCas_vlg_tst
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps IIRCas_vlg_tst 
+# Loading work.IIRCas_vlg_tst
+# Loading work.IIRCas
+# Loading work.FirstTap
+# Loading work.SecondTap
+# Loading work.ThirdTap
+# Loading work.FourthTap
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 2001 of file "Bin_s.txt". (Current address [2001], address range [1:2000])    : D:/FilterVerilog/Chapter_5/E5_5/IIRCas/simulation/modelsim/IIRCas.vt(76)
+#    Time: 0 ps  Iteration: 0  Instance: /IIRCas_vlg_tst
+# ** Note: $finish    : D:/FilterVerilog/Chapter_5/E5_5/IIRCas/simulation/modelsim/IIRCas.vt(60)
+#    Time: 636 us  Iteration: 0  Instance: /IIRCas_vlg_tst
+# 1
+# Break in Module IIRCas_vlg_tst at D:/FilterVerilog/Chapter_5/E5_5/IIRCas/simulation/modelsim/IIRCas.vt line 60
+# Simulation Breakpoint: 1
+# Break in Module IIRCas_vlg_tst at D:/FilterVerilog/Chapter_5/E5_5/IIRCas/simulation/modelsim/IIRCas.vt line 60
+# MACRO ./IIRCas_run_msim_rtl_verilog.do PAUSED at line 21

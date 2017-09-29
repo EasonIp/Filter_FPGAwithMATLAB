@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="CICIP">
+		<CBX_INST_ENTRY INSTANCE_NAME="|CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_differentiator_cic_121:auk_dspip_differentiator_1|LPM_ADD_SUB:u0" CBX_FILE_NAME="add_sub_n0j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_integrator_cic_121:auk_dspip_integrator_1|LPM_ADD_SUB:\glogic:integrator_pipeline_0_generate:u0" CBX_FILE_NAME="add_sub_mvi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|auk_dspip_avalon_streaming_sink_cic_121:aii_sink|scfifo:\normal_fifo:fifo_eab_on:in_fifo" CBX_FILE_NAME="scfifo_ahh1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_differentiator_cic_121:auk_dspip_differentiator_0|LPM_ADD_SUB:u0" CBX_FILE_NAME="add_sub_n0j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_differentiator_cic_121:auk_dspip_differentiator_2|LPM_ADD_SUB:u0" CBX_FILE_NAME="add_sub_n0j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_integrator_cic_121:auk_dspip_integrator_0|LPM_ADD_SUB:\glogic:integrator_pipeline_0_generate:u0" CBX_FILE_NAME="add_sub_mvi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CICIP|CicFilter:CicFilter_cic_inst|CicFilter_cic:CicFilter_cic_inst|CicFilter_cic_core:cic_core|auk_dspip_integrator_cic_121:auk_dspip_integrator_2|LPM_ADD_SUB:\glogic:integrator_pipeline_0_generate:u0" CBX_FILE_NAME="add_sub_mvi.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,11 @@
+//这是TransformFilter.v文件的程序清单
+module TransformFilter (
+	rst,clk,din,
+	clkdv,count16_256,dout_interlaced);
+	
+	input		rst;   //复位信号，高电平有效
+	input		clk;   //FPGA系统时钟，频率为数据速率的16倍：64MHz
+	input	 signed [11:0]	din;    //输入数据：4MHz
+	output clkdv;                //输出时钟：4MHz
+	output [11:0]	count16_256;             //输出数据序号，周期为2048
+	output signed [15:0]	dout_interlaced;   //交织后输出的数据

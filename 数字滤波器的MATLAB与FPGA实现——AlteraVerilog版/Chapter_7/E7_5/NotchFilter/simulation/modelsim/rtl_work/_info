@@ -1,0 +1,87 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\FilterVerilog\Chapter_7\E7_5\NotchFilter\simulation\modelsim
+vmult
+ImZg_6X_GVo1?81>Z_7LYo1
+V3c7637z7RbQ`m]M<N7dAo3
+Z1 dD:\FilterVerilog\Chapter_7\E7_5\NotchFilter\simulation\modelsim
+w1404049840
+8D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/mult.v
+FD:/FilterVerilog/Chapter_7/E7_5/NotchFilter/mult.v
+L0 39
+Z2 OV;L;10.1b;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_7/E7_5/NotchFilter -O0
+!i10b 1
+!s100 Jf4c6aCPh7UOWWC;XaV?30
+!s85 0
+!s108 1404055667.343000
+!s107 D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/mult.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_7/E7_5/NotchFilter|D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/mult.v|
+!s101 -O0
+vnco50
+IoiT]J<1^J8404l;zO^<WT2
+VKz2V?Mn44KTj:YMJRFg6]1
+R1
+w1404048277
+8D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/nco50.vo
+FD:/FilterVerilog/Chapter_7/E7_5/NotchFilter/nco50.vo
+L0 31
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 56o=?6IP`0RCfP;W0beEI1
+!s85 0
+!s108 1404055667.140000
+!s107 D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/nco50.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_7/E7_5/NotchFilter|D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/nco50.vo|
+!s101 -O0
+vNotchFilter
+IY@Y=_mC91oQkmMLZMRHVd0
+V3okiSi7;afWOmZ^4mBPZO3
+R1
+w1404055654
+8D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/source/NotchFilter.v
+FD:/FilterVerilog/Chapter_7/E7_5/NotchFilter/source/NotchFilter.v
+L0 2
+R2
+r1
+31
+R3
+n@notch@filter
+!i10b 1
+!s100 =mckS7nGSd3Ij:O<_]T]e2
+!s85 0
+!s108 1404055667.484000
+!s107 D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/source/NotchFilter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/source|D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/source/NotchFilter.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/source -O0
+vNotchFilter_vlg_tst
+!i10b 1
+!s100 DEhB:?6H6YPP98TXa7:PC0
+IBfjL]R>=a<@;d9Q@lQN3f3
+VEJd;>Dnhl@3onjKhiBl=G1
+R1
+w1404055353
+8D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/simulation/modelsim/NotchFilter.vt
+FD:/FilterVerilog/Chapter_7/E7_5/NotchFilter/simulation/modelsim/NotchFilter.vt
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1404055667.703000
+!s107 D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/simulation/modelsim/NotchFilter.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/simulation/modelsim|D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/simulation/modelsim/NotchFilter.vt|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_7/E7_5/NotchFilter/simulation/modelsim -O0
+n@notch@filter_vlg_tst

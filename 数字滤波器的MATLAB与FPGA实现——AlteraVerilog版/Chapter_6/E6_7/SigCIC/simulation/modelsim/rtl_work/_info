@@ -1,0 +1,47 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\FilterVerilog\Chapter_6\E6_7\SigCIC\simulation\modelsim
+vSigCIC
+I?10;eRz7S[OY:fn<A^nBl1
+Vm0l5RnB1f<]iD=dbcDOZn0
+Z1 dD:\FilterVerilog\Chapter_6\E6_7\SigCIC\simulation\modelsim
+w1401698778
+8D:/FilterVerilog/Chapter_6/E6_7/SigCIC/source/SigCIC.v
+FD:/FilterVerilog/Chapter_6/E6_7/SigCIC/source/SigCIC.v
+L0 2
+Z2 OV;L;10.1b;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+n@sig@c@i@c
+!i10b 1
+!s100 VVY37iJHPR[UAZYL9EkKz1
+!s85 0
+!s108 1401699658.609000
+!s107 D:/FilterVerilog/Chapter_6/E6_7/SigCIC/source/SigCIC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_6/E6_7/SigCIC/source|D:/FilterVerilog/Chapter_6/E6_7/SigCIC/source/SigCIC.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_6/E6_7/SigCIC/source -O0
+vSigCIC_vlg_tst
+!i10b 1
+!s100 n;NNnOSe?knKN@=j;RbXM1
+I_GXmTa^E8>Y_]F>@A`2Oh1
+V_2HMBWfa1676i2mT`[W5Z3
+R1
+w1401699648
+8D:/FilterVerilog/Chapter_6/E6_7/SigCIC/simulation/modelsim/SigCIC.vt
+FD:/FilterVerilog/Chapter_6/E6_7/SigCIC/simulation/modelsim/SigCIC.vt
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1401699658.796000
+!s107 D:/FilterVerilog/Chapter_6/E6_7/SigCIC/simulation/modelsim/SigCIC.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FilterVerilog/Chapter_6/E6_7/SigCIC/simulation/modelsim|D:/FilterVerilog/Chapter_6/E6_7/SigCIC/simulation/modelsim/SigCIC.vt|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_6/E6_7/SigCIC/simulation/modelsim -O0
+n@sig@c@i@c_vlg_tst

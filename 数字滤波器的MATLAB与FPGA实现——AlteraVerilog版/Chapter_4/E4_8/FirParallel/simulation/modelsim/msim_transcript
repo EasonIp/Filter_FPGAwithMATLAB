@@ -1,0 +1,62 @@
+# Reading C:/altera/modelsim/modelsim_ase/tcl/vsim/pref.tcl 
+# do FirFullSerial_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\modelsim\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\modelsim\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_4/E4_8/FirParallel/source {D:/FilterVerilog/Chapter_4/E4_8/FirParallel/source/FirParallel.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module FirParallel
+# 
+# Top level modules:
+# 	FirParallel
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_4/E4_8/FirParallel/ipcore {D:/FilterVerilog/Chapter_4/E4_8/FirParallel/ipcore/mult.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module mult
+# 
+# Top level modules:
+# 	mult
+# 
+# vlog -vlog01compat -work work +incdir+D:/FilterVerilog/Chapter_4/E4_8/FirParallel/simulation/modelsim {D:/FilterVerilog/Chapter_4/E4_8/FirParallel/simulation/modelsim/FirParallel.vt}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module FirParallel_vlg_tst
+# 
+# Top level modules:
+# 	FirParallel_vlg_tst
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  FirParallel_vlg_tst
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps FirParallel_vlg_tst 
+# Loading work.FirParallel_vlg_tst
+# Loading work.FirParallel
+# Loading work.mult
+# Loading lpm_ver.lpm_mult
+# Loading lpm_ver.LPM_HINT_EVALUATION
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 2001 of file "E4_8_Bin_s.txt". (Current address [2001], address range [1:2000])    : D:/FilterVerilog/Chapter_4/E4_8/FirParallel/simulation/modelsim/FirParallel.vt(77)
+#    Time: 0 ps  Iteration: 0  Instance: /FirParallel_vlg_tst
+# ** Note: $finish    : D:/FilterVerilog/Chapter_4/E4_8/FirParallel/simulation/modelsim/FirParallel.vt(61)
+#    Time: 1261 ns  Iteration: 0  Instance: /FirParallel_vlg_tst
+# 1
+# Break in Module FirParallel_vlg_tst at D:/FilterVerilog/Chapter_4/E4_8/FirParallel/simulation/modelsim/FirParallel.vt line 61
+# Simulation Breakpoint: 1
+# Break in Module FirParallel_vlg_tst at D:/FilterVerilog/Chapter_4/E4_8/FirParallel/simulation/modelsim/FirParallel.vt line 61
+# MACRO ./FirFullSerial_run_msim_rtl_verilog.do PAUSED at line 18
+add wave -position insertpoint  \
+sim:/FirParallel_vlg_tst/i1/coe
+run -all
+# Break key hit 
+# Break in Module FirParallel at D:/FilterVerilog/Chapter_4/E4_8/FirParallel/source/FirParallel.v line 42
+# Simulation Breakpoint: Break in Module FirParallel at D:/FilterVerilog/Chapter_4/E4_8/FirParallel/source/FirParallel.v line 42
+# MACRO ./FirFullSerial_run_msim_rtl_verilog.do PAUSED at line 18

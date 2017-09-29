@@ -1,0 +1,11 @@
+//这是PD_LoopFilter.v文件的程序清单
+module PD_LoopFilter (
+	rst,clk,din,
+	datai,dataq,df); 
+	
+	input		rst;   //复位信号，高电平有效
+	input		clk;   //FPGA系统时钟：32MHz
+	input	 signed [7:0]	din;    //输入数据：32MHz
+	output signed [27:0]	datai;  //同相支路输出数据
+	output signed [27:0]	dataq;  //正交支路输出数据
+	output signed [27:0]	df;     //环路滤波器输出数据

@@ -1,0 +1,430 @@
+// Copyright (C) 1991-2012 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "06/26/2014 22:07:18"
+                                                                                
+// Verilog Test Bench template for design : Antenna
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ps/ 1 ps
+module Antenna_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg clk,clk_data;
+reg [15:0] rrin;
+reg rst;
+reg [15:0] x1i;
+reg [15:0] x1r;
+reg [15:0] x2i;
+reg [15:0] x2r;
+reg [15:0] x3i;
+reg [15:0] x3r;
+reg [15:0] x4i;
+reg [15:0] x4r;
+// wires                                               
+wire [15:0]  ei;
+wire [15:0]  er;
+wire [15:0]  w1i;
+wire [15:0]  w1r;
+wire [15:0]  w2i;
+wire [15:0]  w2r;
+wire [15:0]  w3i;
+wire [15:0]  w3r;
+wire [15:0]  w4i;
+wire [15:0]  w4r;
+wire [15:0]  yr;
+
+// assign statements (if any)                          
+Antenna i1 (
+// port map - connection between master ports and signals/registers   
+	.clk(clk),
+	.ei(ei),
+	.er(er),
+	.rrin(rrin),
+	.rst(rst),
+	.w1i(w1i),
+	.w1r(w1r),
+	.w2i(w2i),
+	.w2r(w2r),
+	.w3i(w3i),
+	.w3r(w3r),
+	.w4i(w4i),
+	.w4r(w4r),
+	.x1i(x1i),
+	.x1r(x1r),
+	.x2i(x2i),
+	.x2r(x2r),
+	.x3i(x3i),
+	.x3r(x3r),
+	.x4i(x4i),
+	.x4r(x4r),
+	.yr(yr)
+);
+parameter clk_period=400; //设置时钟信号周期（频率）
+parameter period_data=clk_period*8;//数据周期
+parameter clk_half_period=clk_period/2;
+parameter data_half_period=period_data/2;
+parameter data_num=12000;  //仿真数据长度
+parameter time_sim=data_num*period_data; //仿真时间
+
+initial
+begin
+	//设置时钟信号初值
+	clk=1;
+	clk_data=1;
+	//设置复位信号
+	rst=1;
+	#10000 rst=0;
+	//设置仿真时间
+	#time_sim $finish;
+	//设置输入信号初值
+end
+
+
+
+//产生时钟信号
+always                                                 
+	#clk_half_period clk=~clk;
+
+always                                                 
+	#data_half_period clk_data=~clk_data;
+	
+//从外部TX文件读入数据作为测试激励
+integer Pattern;
+reg [15:0] stimulus[1:data_num];
+initial
+begin
+   //文件必须放置在"工程目录\simulation\modelsim"路径下
+	$readmemb("E7_4_x1i_in.txt",stimulus);
+	Pattern=0;
+	repeat(data_num)
+		begin
+			Pattern=Pattern+1;
+			x1i=stimulus[Pattern];
+			#period_data;//数据周期为时钟周期的8倍
+		end
+end
+
+
+integer Pattern2;
+reg [15:0] stimulus2[1:data_num];
+initial
+begin
+   //文件必须放置在"工程目录\simulation\modelsim"路径下
+	$readmemb("E7_4_x1r_in.txt",stimulus2);
+	Pattern2=0;
+	repeat(data_num)
+		begin
+			Pattern2=Pattern2+1;
+			x1r=stimulus2[Pattern2];
+			#period_data;//数据周期为时钟周期的6倍
+		end
+end
+
+integer Pattern3;
+reg [15:0] stimulus3[1:data_num];
+initial
+begin
+   //文件必须放置在"工程目录\simulation\modelsim"路径下
+	$readmemb("E7_4_x2r_in.txt",stimulus3);
+	Pattern3=0;
+	repeat(data_num)
+		begin
+			Pattern3=Pattern3+1;
+			x2r=stimulus3[Pattern3];
+			#period_data;//数据周期为时钟周期的6倍
+		end
+end
+
+integer Pattern4;
+reg [15:0] stimulus4[1:data_num];
+initial
+begin
+   //文件必须放置在"工程目录\simulation\modelsim"路径下
+	$readmemb("E7_4_x2i_in.txt",stimulus4);
+	Pattern4=0;
+	repeat(data_num)
+		begin
+			Pattern4=Pattern4+1;
+			x2i=stimulus4[Pattern4];
+			#period_data;//数据周期为时钟周期的6倍
+		end
+end
+
+
+integer Pattern5;
+reg [15:0] stimulus5[1:data_num];
+initial
+begin
+
+   //文件必须放置在"工程目录\simulation\modelsim"路径下
+	$readmemb("E7_4_x3r_in.txt",stimulus5);
+	Pattern5=0;
+	repeat(data_num)
+		begin
+			Pattern5=Pattern5+1;
+			x3r=stimulus5[Pattern5];
+			#period_data;//数据周期为时钟周期的6倍
+		end
+end
+
+integer Pattern6;
+reg [15:0] stimulus6[1:data_num];
+initial
+begin
+
+   //文件必须放置在"工程目录\simulation\modelsim"路径下
+	$readmemb("E7_4_x3i_in.txt",stimulus6);
+	Pattern6=0;
+	repeat(data_num)
+		begin
+			Pattern6=Pattern6+1;
+			x3i=stimulus6[Pattern6];
+			#period_data;//数据周期为时钟周期的6倍
+		end
+end
+
+integer Pattern7;
+reg [15:0] stimulus7[1:data_num];
+initial
+begin
+
+   //文件必须放置在"工程目录\simulation\modelsim"路径下
+	$readmemb("E7_4_x4r_in.txt",stimulus7);
+	Pattern7=0;
+	repeat(data_num)
+		begin
+			Pattern7=Pattern7+1;
+			x4r=stimulus7[Pattern7];
+			#period_data;//数据周期为时钟周期的6倍
+		end
+end
+
+integer Pattern8;
+reg [15:0] stimulus8[1:data_num];
+initial
+begin
+
+   //文件必须放置在"工程目录\simulation\modelsim"路径下
+	$readmemb("E7_4_x4i_in.txt",stimulus8);
+	Pattern8=0;
+	repeat(data_num)
+		begin
+			Pattern8=Pattern8+1;
+			x4i=stimulus8[Pattern8];
+			#period_data;//数据周期为时钟周期的6倍
+		end
+end
+
+integer Pattern9;
+reg [15:0] stimulus9[1:data_num];
+initial
+begin
+
+   //文件必须放置在"工程目录\simulation\modelsim"路径下
+	$readmemb("E7_4_rr_in.txt",stimulus9);
+	Pattern9=0;
+	repeat(data_num)
+		begin
+			Pattern9=Pattern9+1;
+			rrin=stimulus9[Pattern9];
+			#period_data;//数据周期为时钟周期的6倍
+		end
+end
+
+////将仿真数据Error写入外部TXT文件中(E7_3_Error_out.txt)
+
+	
+integer file_out;
+initial 
+begin
+   //文件放置在"工程目录\simulation\modelsim"路径下                                                  
+	file_out = $fopen("E7_4_err_out.txt");
+	if(!file_out)
+		begin
+			$display("could not open file!");
+			$finish;
+		end
+end
+wire rst_write;
+wire signed [15:0] dout_s;
+assign dout_s = er;                   //将dout转换成有符号数据
+assign rst_write = clk_data& (!rst);//产生写入时钟信号，复位状态时不写入数据
+always @(posedge rst_write )
+	$fdisplay(file_out,"%d",dout_s);
+
+
+integer file_out2;
+initial 
+begin
+   //文件放置在"工程目录\simulation\modelsim"路径下                                                  
+	file_out2 = $fopen("E7_4_eri_out.txt");
+	if(!file_out2)
+		begin
+			$display("could not open file!");
+			$finish;
+		end
+end
+wire signed [15:0] dout_s2;
+assign dout_s2 = ei;                   //将dout转换成有符号数据
+always @(posedge rst_write )
+	$fdisplay(file_out2,"%d",dout_s2);
+
+integer file_out3;
+initial 
+begin
+   //文件放置在"工程目录\simulation\modelsim"路径下                                                  
+	file_out3 = $fopen("E7_4_w1r_out.txt");
+	if(!file_out3)
+		begin
+			$display("could not open file!");
+			$finish;
+		end
+end
+wire signed [15:0] dout_s3;
+assign dout_s3 = w1r;                   //将dout转换成有符号数据
+always @(posedge rst_write )
+	$fdisplay(file_out3,"%d",dout_s3);
+
+
+integer file_out4;
+initial 
+begin
+   //文件放置在"工程目录\simulation\modelsim"路径下                                                  
+	file_out4 = $fopen("E7_4_w1i_out.txt");
+	if(!file_out4)
+		begin
+			$display("could not open file!");
+			$finish;
+		end
+end
+wire signed [15:0] dout_s4;
+assign dout_s4 = w1i;                   //将dout转换成有符号数据
+always @(posedge rst_write )
+	$fdisplay(file_out4,"%d",dout_s4);
+
+
+integer file_out5;
+initial 
+begin
+   //文件放置在"工程目录\simulation\modelsim"路径下                                                  
+	file_out5 = $fopen("E7_4_w2r_out.txt");
+	if(!file_out5)
+		begin
+			$display("could not open file!");
+			$finish;
+		end
+end
+wire signed [15:0] dout_s5;
+assign dout_s5 = w2r;                   //将dout转换成有符号数据
+always @(posedge rst_write )
+	$fdisplay(file_out5,"%d",dout_s5);
+
+integer file_out6;
+initial 
+begin
+   //文件放置在"工程目录\simulation\modelsim"路径下                                                  
+	file_out6 = $fopen("E7_4_w2i_out.txt");
+	if(!file_out6)
+		begin
+			$display("could not open file!");
+			$finish;
+		end
+end
+wire signed [15:0] dout_s6;
+assign dout_s6 = w2i;                   //将dout转换成有符号数据
+always @(posedge rst_write )
+	$fdisplay(file_out6,"%d",dout_s6);
+
+
+
+integer file_out7;
+initial 
+begin
+   //文件放置在"工程目录\simulation\modelsim"路径下                                                  
+	file_out7 = $fopen("E7_4_w3r_out.txt");
+	if(!file_out7)
+		begin
+			$display("could not open file!");
+			$finish;
+		end
+end
+wire signed [15:0] dout_s7;
+assign dout_s7 = w3r;                   //将dout转换成有符号数据
+always @(posedge rst_write )
+	$fdisplay(file_out7,"%d",dout_s7);
+
+integer file_out8;
+initial 
+begin
+   //文件放置在"工程目录\simulation\modelsim"路径下                                                  
+	file_out8 = $fopen("E7_4_w3i_out.txt");
+	if(!file_out8)
+		begin
+			$display("could not open file!");
+			$finish;
+		end
+end
+wire signed [15:0] dout_s8;
+assign dout_s8 = w3i;                   //将dout转换成有符号数据
+always @(posedge rst_write )
+	$fdisplay(file_out8,"%d",dout_s8);
+
+
+
+integer file_out9;
+initial 
+begin
+   //文件放置在"工程目录\simulation\modelsim"路径下                                                  
+	file_out9 = $fopen("E7_4_w4r_out.txt");
+	if(!file_out9)
+		begin
+			$display("could not open file!");
+			$finish;
+		end
+end
+wire signed [15:0] dout_s9;
+assign dout_s9 = w4r;                   //将dout转换成有符号数据
+always @(posedge rst_write )
+	$fdisplay(file_out9,"%d",dout_s9);
+
+integer file_out10;
+initial 
+begin
+   //文件放置在"工程目录\simulation\modelsim"路径下                                                  
+	file_out10 = $fopen("E7_4_w4i_out.txt");
+	if(!file_out10)
+		begin
+			$display("could not open file!");
+			$finish;
+		end
+end
+wire signed [15:0] dout_s10;
+assign dout_s10 = w4i;                   //将dout转换成有符号数据
+always @(posedge rst_write )
+	$fdisplay(file_out10,"%d",dout_s10);
+	
+endmodule
+
+
+

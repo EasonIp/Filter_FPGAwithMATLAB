@@ -1,0 +1,145 @@
+//这是window.v文件的程序清单
+module window (
+	rst,clk,din,
+	clkdv,count16_256,dout_interlaced);
+	
+	input		rst;   //复位信号，高电平有效
+	input		clk;   //FPGA系统时钟，频率为数据速率的16倍：64MHz
+	input	 signed [11:0]	din;    //输入数据：4MHz
+	output clkdv;                //输出时钟：4MHz
+	output [11:0]	count16_256;             //输出数据序号，周期为2048
+	output signed [15:0]	dout_interlaced;   //交织后输出的数据
+
+	//对64MHz主时钟进行16分频处理，用于输入数据加窗等运算
+	reg [3:0] count;
+	reg clk16dv;
+	always @(posedge clk or posedge rst)
+		if (rst)
+		   begin
+				count <= 0;
+				clk16dv <=0;
+			end
+		else
+		   begin
+				count <= count + 1;
+				clk16dv <= count[3];
+			end
+   assign clkdv = clk16dv;
+	
+   //对4MHz的原始输入数据进行加窗处理，对延时128个点的原始数据进行加窗处理
+	wire signed [11:0] din_delay128;
+	wire signed [11:0] taps_0;
+	reg [7:0] addr,taddr,window_addr;
+	shifter12_128	u0 (
+		.clock (clk16dv),
+		.shiftin (din),
+		.shiftout (din_delay128),
+		.taps (taps_0));//没有使用该接口信号
+	//汉明窗数据	
+	wire signed [11:0] hamming;
+	rom12_256	u1 (
+		.address (addr),
+		.clock (clk16dv),
+		.q (hamming));
+	//assign hamming = 12'h7ff;	
+	
+	
+	//加窗乘法运算,2个周期延时	
+	wire signed [23:0] dout_pre,dout_aft;
+	mult12_12	u2 (
+		.clock (clk16dv),
+		.dataa (din),
+		.datab (hamming),
+		.result (dout_pre));
+	//加窗乘法运算，2个周期延时	
+	mult12_12	u3 (
+		.clock (clk16dv),
+		.dataa (din_delay128),
+		.datab (hamming),
+		.result (dout_aft));
+		
+		
+   //通过延时处理，使加窗后的数据与序号对齐
+	always @(posedge clk16dv or posedge rst)
+		if (rst)
+			begin
+				addr <= 0;
+				taddr <= 0;
+				window_addr <= 0;
+			end
+		else
+		   begin
+				addr <= addr +1;
+				taddr <= addr;
+				window_addr <= taddr;
+			end
+		
+	
+	//将4MHz加窗后的数据通过双端口RAM转换成64MHz数据输出
+	reg [11:0] count_addr;
+	reg [7:0] read_addr;
+	always @(posedge clk or posedge rst)
+		if (rst)
+			begin
+				count_addr <= 12'd212;//根据仿真确定计数初值，确保count与加窗后数据序号一致，便于交织处理
+				read_addr<= 0;
+			end
+		else
+		   begin
+				count_addr <= count_addr +1;
+				if ((window_addr>240) || (window_addr==0))
+				   read_addr <= read_addr +1;
+				else
+				   read_addr <= 0;
+			end  
+   assign count16_256 = count_addr;
+	
+	//双端口RAM，实现数据速率转换输出
+	wire signed [15:0] doutpre,doutaft;
+	wire wren;
+	assign wren=1'b1;
+	dram16_256	u4 (
+		.data (dout_pre[22:7]),
+		.rdaddress (read_addr),
+		.rdclock (clk),
+		.wraddress (window_addr),
+		.wrclock (clk16dv),
+		.wren (wren),
+		.q (doutpre));
+
+	dram16_256	u5 (
+		.data (dout_aft[22:7]),
+		.rdaddress (read_addr),
+		.rdclock (clk),
+		.wraddress (window_addr),
+		.wrclock (clk16dv),
+		.wren (wren),
+		.q (doutaft));
+		
+	
+	//将原始加窗的数据，延时2048个时钟周期，便于对两路数据进行交织处理
+	wire signed [15:0] delay2048;
+	wire [127:0] taps_6;
+	shifter16_2048 u6 (
+	   .clock (clk),
+	   .shiftin (doutpre),
+	   .shiftout (delay2048),
+	   .taps (taps_6));//没有使用该接口信号
+
+	//交织两路数据，同时调整4096点的计数器，使序号与数据对齐
+	reg signed [15:0] dout;
+	always @(posedge clk or posedge rst)
+		if (rst)
+			begin
+				dout <= 0;
+			end
+		else
+		   begin
+				if (count_addr > 2047)
+				   dout  <= delay2048;
+				else 
+				   dout  <= doutaft;
+			end
+	assign dout_interlaced = dout;
+	
+endmodule

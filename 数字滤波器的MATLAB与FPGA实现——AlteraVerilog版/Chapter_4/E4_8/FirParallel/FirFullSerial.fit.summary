@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed May 28 20:48:48 2014
+Quartus II 32-bit Version : 12.1 Build 177 11/07/2012 SJ Full Version
+Revision Name : FirFullSerial
+Top-level Entity Name : FirParallel
+Family : Cyclone IV E
+Device : EP4CE15F17C8
+Timing Models : Final
+Total logic elements : 517 / 15,408 ( 3 % )
+    Total combinational functions : 296 / 15,408 ( 2 % )
+    Dedicated logic registers : 354 / 15,408 ( 2 % )
+Total registers : 354
+Total pins : 43 / 166 ( 26 % )
+Total virtual pins : 0
+Total memory bits : 0 / 516,096 ( 0 % )
+Embedded Multiplier 9-bit elements : 16 / 112 ( 14 % )
+Total PLLs : 0 / 4 ( 0 % )

@@ -1,0 +1,22 @@
+//这是Antenna.v文件的程序清单
+module Antenna (
+	rst,clk,Xin,Rin,
+	Error,Yout);
+	
+	input		rst;   //复位信号，高电平有效
+	input		clk;   //FPGA系统时钟，频率为数据速率的6倍
+	input	 signed [15:0]	Xin;   //输入数据
+	input	 signed [15:0]	Rin;   //参考数据
+	output signed [15:0]	Error; //LMS算法的误差信号
+	output signed [15:0]	Yout;  //滤波后的输出数据
+	
+	//3位计数器，计数周期为6，为输入数据速率
+	reg [2:0] count;
+	always @(posedge clk or posedge rst)
+		if (rst)
+			count <= 3'd0;
+		else
+			if (count==3'd5)
+			   count <= 3'd0;
+			else
+				count <= count + 1;
